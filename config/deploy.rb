@@ -15,7 +15,7 @@ server 'jobsgalore.eu',
        }
 
 set :application, "JobsGalore"
-set :repo_url, "git@github.com:VINichkov/JobsGalore.git"
+set :repo_url, "git@github.com:jobsgalore/jobsgalore.git"
 #set :puma_threads,    [4, 16]
 #set :puma_workers,    0
 
