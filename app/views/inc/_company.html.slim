@@ -1,0 +1,45 @@
+.panel.panel-default.hidden-xs
+  .panel-body
+    .col-lg-3.col-md-3.col-sm-3.text-center
+      = link_to(image_bg(company.logo_url, "contain", "150px", "120px"), company)
+      span
+        = link_industry(company.industry.name, company.industry, Objects::COMPANIES, class: 'text-success')
+        | &nbsp; - &nbsp;
+      span
+        = link_location(company.location.name, company.location, Objects::COMPANIES, class: 'text-warning')
+    div[class = "#{ current_client&.admin? ? "col-lg-7 col-md-7 col-sm-7" : "col-lg-9 col-md-9 col-sm-9"}"]
+      h3
+        = link_to(highlight(company.name, Search.str_to_highlight(query)), company_highlight_view_path(id:company, text:query), class: 'text-warning')
+      p
+      - if company.site
+        p
+          = link_to company.site, company.site, rel: "nofollow"
+      - if company.recrutmentagency
+        p
+          strong
+            |Recruitment agency &nbsp;
+      p
+        = highlight(company.description_text.to_s + "...", Search.str_to_highlight(query))
+
+    - if current_client&.admin?
+      .col-lg-2.col-md-2.col-sm-2
+        = render 'inc/btn_company', company: company
+
+.row.border_top.hidden-lg.hidden-md.hidden-sm
+  h3
+    = link_to(highlight(company.name, Search.str_to_highlight(query)), company_highlight_view_path(id:company, text:query))
+  p
+  - if company.site
+    p
+      = link_to company.site, company.site, rel: "nofollow"
+  - if company.recrutmentagency
+    p
+      strong
+        |Recruitment agency &nbsp;
+  p
+    = highlight(company.description_text.to_s + "...", Search.str_to_highlight(query))
+  span
+    = link_industry(company.industry.name, company.industry, Objects::COMPANIES, class: 'text-success')
+  | &nbsp; - &nbsp;
+  span
+    = link_location(company.location.name, company.location, Objects::COMPANIES, class: 'text-warning')

@@ -1,0 +1,10 @@
+div[style=title_email]
+  div[style=h1_email]
+    |New message
+div[style=body_email]
+  strong
+    |Dear #{@resume.client.full_name}
+  =space_email
+  | #{@client.full_name} #{link_to @client.email, "mailto:#{@client.email}?subject=RE:#{@resume.title}"}  sent you a message:
+  div[style=message_email]
+    = render inline: @letter

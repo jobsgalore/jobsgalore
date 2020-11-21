@@ -1,0 +1,53 @@
+
+  - if @company.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      ul
+        - @company.errors.full_messages.each do |message|
+          li = message
+  hr.colorgraph
+      .form-group
+        = f.label :name
+        br
+        = f.text_field :name, class:"form-control", required:"required"
+      .form-group
+        = f.label :site
+        br
+        = f.text_field :site, class:"form-control"
+      .form-group
+        = f.label :size
+        br
+        = f.collection_select :size_id, Size.all, :id, :size, {:prompt=>true}, {class:"selectpicker form-control", "data-style"=>"btn-default"}
+      .form-group
+        = f.label :location
+        br
+        = react_component('Autocomplete',
+                className: "form-control dropdown-toggle",
+                name: "company[location",
+                id: "company_location_id",
+                route:'/search_locations/',
+                defaultName: @company.location ? @company.location.name : Location.default.name,
+                defaultId:@company.location ? @company.location.id : Location.default.id)
+      .form-group
+        = f.label :industry, "Industry"
+        br
+        = f.collection_select(:industry_id, Industry.select(:id, :name).all, :id, :name, {prompt: true}, {class: "form-control"})
+      .form-group
+        = f.check_box :recrutmentagency
+        |  &nbsp;
+        = f.label :recrutmentagency, "Recruitment agency"
+      .form-group
+        = f.label :description
+        br
+        = f.text_area :description, class: "markdown none"
+        div.editable
+          = @company.render_description
+      hr.colorgraph
+        .row
+          .col-xs-12.col-md-6.col-sm-6.col-lg-6
+            = f.submit class: "btn btn-primary btn-block"
+            p
+          .col-xs-12.col-md-6.col-sm-6.col-lg-6
+            = link_to 'Back', :back, class:"btn btn-success btn-block"
+            p
+

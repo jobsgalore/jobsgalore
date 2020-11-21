@@ -1,0 +1,101 @@
+.row.well
+  .col-md-4.col-lg-4
+    -if @client.photo.nil?
+      = image_tag(image_path("avatar.jpg"), class: 'img-thumbnail', size:"300x300", alt: @client.full_name)
+    -else
+      =image_tag(Dragonfly.app.remote_url_for(@client.photo_uid), class: 'img-thumbnail', size:"300x300", alt: @client.full_name)
+  .col-md-8.col-lg-8
+    h2 #{@client.firstname} #{@client.lastname}
+    h2 Email: #{@client.email}
+    h2 Phone: #{@client.phone}
+    h2 #{@client.location.suburb}, #{@client.location.state}
+    h2 Birthday #{@client.birth}
+    p
+      strong Gender:
+      = @client.gender
+    p
+      strong encrypted_password:
+      = @client.encrypted_password
+    p
+      strong reset_password_token:
+      = @client.reset_password_token
+    p
+      strong reset_password_sent_at:
+      = @client.reset_password_sent_at
+    p
+      strong remember_created_at:
+      = @client.remember_created_at
+    p
+      strong sign_in_count:
+      = @client.sign_in_count
+    p
+      strong current_sign_in_at:
+      = @client.current_sign_in_at
+    p
+      strong last_sign_in_at:
+      = @client.last_sign_in_at
+    p
+      strong current_sign_in_ip:
+      = @client.current_sign_in_ip
+    p
+      strong last_sign_in_ip:
+      = @client.last_sign_in_ip
+    p
+      strong confirmation_token:
+      = @client.confirmation_token
+    p
+      strong confirmed_at:
+      = @client.confirmed_at
+    p
+      strong confirmation_sent_at:
+      = @client.confirmation_sent_at
+    p
+      strong unconfirmed_email:
+      = @client.unconfirmed_email
+    p
+      strong failed_attempts:
+      = @client.failed_attempts
+    p
+      strong unlock_token:
+      = @client.unlock_token
+    p
+      strong locked_at:
+      = @client.locked_at
+    p
+      strong type:
+      = @client.character
+  -if @client.character ==TypeOfClient::EMPLOYER or @client.character == TypeOfClient::EMPLOYEE then
+    .row
+      h2 Your jobs
+    .row
+      - @client.job.all.each do |job|
+        -if not(job.highlight.nil?) and job.urgent.nil?
+          .panel-body.well.highlight
+            =render 'clients/job', job:job
+        -elsif job.highlight.nil? and not(job.urgent.nil?)
+          .panel-body.well.urgent
+            = render 'clients/job', job: job
+        - elsif not(job.highlight.nil?) and not (job.urgent.nil?)
+          .panel-body.well.highlight.urgent
+            = render 'clients/job', job: job
+        - elsif job.highlight.nil? and job.urgent.nil?
+          .panel-body.well
+            = render 'clients/job', job: job
+  -else
+    .row
+      h3 Your resumes
+    .row
+      - if @client.resume.count>0
+        -@client.resume.all.each do |resume|
+          - if not (resume.highlight.nil?) and resume.urgent.nil?
+            .panel-body.well.highlight
+              = render 'clients/resume', resume: resume
+          - elsif resume.highlight.nil? and not (resume.urgent.nil?)
+            .panel-body.well.urgent
+              = render 'clients/resume', resume: resume
+          - elsif not (resume.highlight.nil?) and not (resume.urgent.nil?)
+            .panel-body.well.highlight.urgent
+              = render 'clients/resume', resume: resume
+          - elsif resume.highlight.nil? and resume.urgent.nil?
+            .panel-body.well
+              = render 'clients/resume', resume: resume

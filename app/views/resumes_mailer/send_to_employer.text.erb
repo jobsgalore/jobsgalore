@@ -1,0 +1,5 @@
+______________________________________________________________________________
+<%=@resume.client.full_name%>(<%=@resume.client.email%>) applied to <%=@job.title%>(<%=job_url(@job)%>) job in <%= @job.location.name %>
+______________________________________________________________________________
+<%= HtmlToPlainText.plain_text(@letter).squish %>
+

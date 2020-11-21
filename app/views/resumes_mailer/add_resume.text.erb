@@ -1,0 +1,19 @@
+Your resume was successfully posted on Jobs Galore!
+
+Dear <%=@resume.client.firstname%>,
+
+You've successfully posted your resume on Jobs Galore.
+The link to the resume <%=resume_url(@resume.id)%>
+
+<%= render 'inc_mailer/mailing' %>
+
+Find a new job quickly::
+
+Urgent
+In a hurry? Add an Urgent tag to your resumes. It's a great way to attract serious offers quickly.
+
+Highlight
+Highlighted resumes stand out from the other ads on the search and browse results due to the orange background colour. Highlighted resumes have greater visibility and therefore receive more visits and replies than other Ads.
+
+<%= new_order_url(@resume, :resume) %>
+

@@ -1,0 +1,61 @@
+- meta_for_company(company)
+- cache([company,query]) do
+  = render 'companies/show/markup_company', company: company
+  .container
+    .col-lg-8.col-md-8.hidden-sm.hidden-xs
+      span
+        h1.text-center
+          = highlight(company.name, Search.str_to_highlight(query))
+          - if company.realy?
+            span.glyphicon.glyphicon-ok
+      p
+      = highlight(company.render_description, Search.str_to_highlight(query))
+      = render 'ad/rtb_block', code: 'before_similar_job_md' if Propert.ads_turn_on?
+      = jobs_of_company(company)
+    .col-lg-4.col-md-4.hidden-sm.hidden-xs
+      .text-center
+        = company_logo(company, "300px", "250px")
+      .row
+        h3.text-center
+          |Summary
+      .well
+        = company_summary(company)
+        .row
+          .col-lg-12.col-md-12
+            =link_to(contacts_of_company_url(company.name), class: "btn btn-success btn-block", onclick: "experiment('contacts_of_companies', 'Вход через окно компании');") do
+              |Contact
+            p
+        .btn_margin
+          .text-center
+            = social_button_company company
+      = render 'ad/rtb_block', code: "after_summary_md" if Propert.ads_turn_on?
+    .col-xs-12.col-sm-12.hidden-md.hidden-lg
+      span
+        h1.text-center
+          = highlight(company.name, Search.str_to_highlight(query))
+          - if company.realy?
+            span.glyphicon.glyphicon-ok
+      .row
+        .col-xs-12
+          .text-center
+            = company_logo(company, "300px", "250px")
+            br
+            = social_button_company company
+            /= social_share_button_tag company.name, class: "center-block"
+      .row
+        .col-xs-12
+          h3.text-center
+            |Summary
+          = company_summary(company)
+      = render 'ad/rtb_block', code: "before_ad_xs" if Propert.ads_turn_on?
+      .row
+        .col-xs-12.col-sm-12
+          - if company.description
+            p
+              = highlight(company.render_description, Search.str_to_highlight(query))
+          .text-center
+            = jobs_of_company(company)
+      .row.sticky
+        .col-xs-12
+          = link_to(contacts_of_company_url(company.name), class: "btn btn-success  btn-circle btn-block", onclick: "experiment('contacts_of_companies', 'Вход через окно компании');") do
+            |Contact

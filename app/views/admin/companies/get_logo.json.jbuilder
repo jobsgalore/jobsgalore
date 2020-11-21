@@ -1,0 +1,1 @@
+json.extract! @logo, :logo_uid

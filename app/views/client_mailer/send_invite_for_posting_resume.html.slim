@@ -1,0 +1,11 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Do you want to get a dream job?
+div[style=body_email]
+  |Do you want to get a dream job? Let employers find you. Post your resume on Jobsgalore.eu and the resume will be seen by thousands of employers.
+  div[style=button_email]
+    = link_to 'Post a new resume', new_resume_url + "?" + @utm, style: link_email, target: "_blank"
+  = space_email
+  = space_email
+=render 'inc_mailer/mailing'
+=render 'inc_mailer/resume_to_us'

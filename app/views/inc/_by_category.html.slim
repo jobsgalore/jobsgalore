@@ -1,0 +1,10 @@
+.row
+  .col-lg-12.col-md-12
+    .well
+      ul.nav.nav-list
+        li.nav-header
+          h4
+            | #{type.name} by Category
+        - category.each do |elem|
+          li.col-sm-6.col-md-4.col-lg-4
+            = link_industry elem.name, elem, type

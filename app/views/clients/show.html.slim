@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Firstname:
+  = @client.firstname
+p
+  strong Lastname:
+  = @client.lastname
+p
+  strong Email:
+  = @client.email
+p
+  strong Phone:
+  = @client.phone
+p
+  strong Password:
+  = @client.password
+p
+  strong Responsible:
+  = @client.responsible
+p
+  strong Photo:
+  =image_tag Dragonfly.app.remote_url_for(@client.photo_uid), alt: @client.full_name
+p
+  strong Gender:
+  = @client.gender
+p
+  strong Location:
+  = @client.location
+
+= link_to 'Edit', edit_client_path(@client)
+'|
+= link_to 'Back', clients_path

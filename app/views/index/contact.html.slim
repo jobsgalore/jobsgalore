@@ -1,0 +1,42 @@
+=render "ad/propeller_popunder_xs"
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-6.col-lg-6.col-md-offset-3.col-lg-offset-3
+      = form_for(:contact, html:{enctype: "multipart/form-data"}, url: send_email_path, method: :post, ) do |f|
+        h1.none Contact us
+        h2 Contact us
+        hr.colorgraph
+        .form-group
+          = f.label "Your first name"
+          br
+          = f.text_field :firstname, autofocus: true, class: "form-control", placeholder: "First Name"
+        .form-group
+          = f.label "Your surname"
+          br
+          = f.text_field :lastname, class: "form-control", placeholder: "Surname"
+        .form-group
+          = f.label "Your email"
+          br
+          = f.text_field :email, class: "form-control", placeholder: "email@mail.com"
+        .form-group
+          = f.label "Your phone number"
+          br
+          = react_component('InputMask', id: "phone", name: "contact[phone]", class_name: "form-control", dataformat: "dd dddd dddddd", placeholder: "02 9999 9999")
+        .form-group
+          = f.label "Subject"
+          br
+          = f.text_field :subject, class: "form-control"
+        .form-group
+          = f.label "Your message"
+          br
+          = f.text_area :message, class: "form-control", rows: "6"
+        hr.colorgraph
+        .row
+          .col-xs-6.col-md-6
+            = f.submit "Send", class: "btn btn-primary btn-block"
+            p
+          .col-xs-6.col-md-6
+            button.btn.btn-success.btn-block[onclick="history.back()"]
+              |Back
+            p
+

@@ -1,0 +1,10 @@
+div[style=title_email]
+  div[style=h1_email]
+    |#{@email[:subject]}
+div[style=body_email]
+  strong
+    |Dear Vyacheslav,
+  =space_email
+  | #{@email[:firstname]} #{@email[:lastname]} (phone number: #{@email[:phone]}) #{link_to @email[:email], "mailto:#{@email[:email]}?subject=RE:#{@email[:subject]}&body=#{render inline: @email[:message]}"}  sent you a message:
+  div[style=message_email]
+    = render inline: @email[:message]

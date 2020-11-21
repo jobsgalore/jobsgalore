@@ -1,0 +1,68 @@
+
+  - if @client.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@client.errors.count, "error")} prohibited this client from being saved:"
+      ul
+        - @client.errors.full_messages.each do |message|
+          li = message
+  hr.colorgraph
+    .row
+      .col-xs-12.col-sm-6.col-md-6
+        .form-group
+          = f.label "Your first name"
+          br
+          = f.text_field :firstname, autofocus: true, class:"form-control",placeholder:"First Name"
+      .col-xs-12.col-sm-6.col-md-6
+        .form-group
+          = f.label "Your surname"
+          br
+          = f.text_field :lastname, class:"form-control",placeholder:"Surname"
+    .form-group
+      = f.label "Gender"
+      br
+      select.selectpicker.form-control[data-style="btn-default" name="client[gender]" ]
+        -if @client.gender.nil?
+          option[value="nil" selected] Unidentified
+          option[value="false"] Male
+          option[value="true"] Female
+        -elsif @client.gender
+          option[value="nil"] Unidentified
+          option[value="false"] Male
+          option[value="true" selected] Female
+        -else
+          option[value="nil"] Unidentified
+          option[value="false" selected] Male
+          option[value="true"] Female
+    br
+    .form-group
+      =f.label :type
+      br
+      =f.select :character,  options_for_select([TypeOfClient::EMPLOYER, TypeOfClient::APPLICANT, TypeOfClient::EMPLOYEE], @client.character), {:'data-style'=>"btn-default"},{:class=>"selectpicker form-control"}
+    .form-group
+      = f.label "Your birthday"
+      br
+    .form-group
+      = f.label "Your location"
+      br
+      = react_component('Autocomplete',
+                        className: "form-control dropdown-toggle",
+                        name: "client[location",
+                        id: "client_location_id",
+                        defaultName:"#{@client.location.suburb if @client.location}, #{@client.location.state if @client.location}",
+                        defaultId:"#{@client.location.id if @client.location}")
+    .form-group
+      = f.label "Your phone number"
+      br
+      = react_component('InputMask', id: "phone", name: "client[phone]", class_name: "form-control", dataformat: "dd dddd dddddd", placeholder: "02 9999 9999",defaultValue:@client.phone)
+    .form-group
+      = f.label "Email"
+      br
+      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "surname@hotmail.com"
+    hr.colorgraph
+      .row
+        .col-xs-12.col-sm-6.col-md-6
+          = f.submit class: "btn btn-primary btn-block"
+          p
+        .col-xs-12.col-sm-6.col-md-6
+          = link_to 'Back', :back, class:"btn btn-success btn-block "
+    br

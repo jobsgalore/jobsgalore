@@ -1,0 +1,67 @@
+<footer class="footer navbar-blue hidden-xs hidden-sm">
+  <br />
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <ul class="nav navbar-nav">
+            <li>
+              <%=link_to "About us", about_path %>
+            </li>
+            <li>
+              <%= link_to "Contact us", contact_path%>
+            </li>
+            <li>
+              <%= link_to "Terms and Conditions", terms_and_conditions_path%>
+            </li>
+            <li>
+              <%= link_to "Privacy policy", privacy_path%>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="text-center hidden-xs hidden-sm">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-3">
+                Connect With Us:
+              </div>
+              <div class="col-sm-8 social-share-button">
+                <a class="btn btn-email" rel="nofollow"  href="mailto:email@jobsgalore.eu">
+                  <i class="glyphicon ssb-icon-min ssb-email" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-twitter" rel="nofollow"  href="https://twitter.com/JobsGalore_AU">
+                  <i class="glyphicon ssb-icon-min ssb-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-linkedin" rel="nofollow"  href="https://www.linkedin.com/company/jobsgalore-eu">
+                  <i class="glyphicon ssb-icon-min ssb-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+          </div>
+          <ul class="nav nav-justified hidden-md hidden-lg">
+            <li class="text-center">
+              Connect With Us:
+            </li>
+            <li>
+              <div class="text-center social-share-button">
+                <a class="btn btn-email" rel="nofollow"  href="mailto:email@jobsgalore.eu">
+                  <i class="glyphicon ssb-icon-min ssb-email" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-twitter" rel="nofollow"  href="https://twitter.com/JobsGalore_AU">
+                  <i class="glyphicon ssb-icon-min ssb-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-linkedin" rel="nofollow"  href="https://www.linkedin.com/company/jobsgalore-eu">
+                  <i class="glyphicon ssb-icon-min ssb-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center">
+          © <%="#{PropertsHelper::COMPANY}"  %> All rights reserved.
+        </div>
+      </div>
+  </div>
+  </div>
+</footer>

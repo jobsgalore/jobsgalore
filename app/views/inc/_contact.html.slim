@@ -1,0 +1,26 @@
+.modal.fade#contact[tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"]
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button[type="button" class="close" data-dismiss="modal" aria-label="Close"]
+          span[aria-hidden="true"]
+            |&times;
+        h4.modal-title Contact:
+      .modal-body
+        .container-fluid
+          .row
+            .col-lg-3.col-md-3
+              = image_bg(object&.photo_url, "contain", "60px", "60px")
+            .col-lg-9.col-md-9
+              = object&.full_name
+              br
+              |Email:
+              | &nbsp;
+              a[href ="mailto:#{ object&.email}?subject=#{title}" rel="nofollow"] = object&.email
+              br
+              |Phone:
+              | &nbsp;
+              a[href ="tel:#{ object&.phone}" rel="nofollow" ] #{ object&.phone}
+      .modal-footer
+        button[type="button" class="btn btn-default" data-dismiss="modal"]
+          |Close

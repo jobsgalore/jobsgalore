@@ -1,0 +1,19 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Notification
+div[style=body_email]
+  |The job opportunity #{link_to @job.title, job_url(@job) + "&" + @utm, target: "_blank"} in #{@job.location.name} will be removed in #{@days ==1 ? "1 day" : "2 days"}. You can prolong it up to 14 days.
+  div[style=button_email]
+    = link_to 'Prolong', prolong_url(@job) + "&" + @utm, style: link_email, target: "_blank"
+  - if @job.highlight.blank? or @job.urgent.blank?
+    =space_email
+    =space_email
+    =space_email true
+    =space_email
+    div[style=h3_email]
+      |You can also activate:
+    -if @job.highlight.blank?
+      =render 'jobs_mailer/party_of_email/highlight'
+    = space_email
+    - if @job.urgent.blank?
+      =render 'jobs_mailer/party_of_email/urgent'

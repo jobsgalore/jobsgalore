@@ -1,0 +1,11 @@
+.well
+  ul.nav.nav-list
+    li.nav-header
+      h4
+        |Major cities
+    - @main.city.each do |t|
+      li.col-sm-4.col-md-12.col-lg-12
+        = link_to local_object_path(t,Objects::JOBS.code)  do
+          |#{t.suburb}
+          span.badge[style = "float: right"]
+            |#{t.counts_jobs}

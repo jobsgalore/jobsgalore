@@ -1,0 +1,22 @@
+.hidden-xs.hidden-sm.hidden-md.hidden-lg[itemscope itemtype="http://schema.org/Organization"]
+  span[itemprop="address"]
+    = company.location.name
+  span[itemprop="telephone"]
+    = company.client.first.phone || "empty"
+  span[itemprop="name"]
+    = company.name
+  span[itemprop="description"]
+    = company.description_text
+  - company.client.where(send_email: true)&.each do |stuff|
+    span[itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint"]
+      span[itemprop="name"]
+        = stuff.full_name
+      span[itemprop="email"]
+        = stuff.email
+      span[itemprop="telephone"]
+        = stuff.phone
+      span[itemprop="contactType"]
+        |customer service
+  -if company.logo.present?
+    span[itemprop="image"]
+      = Dragonfly.app.remote_url_for(company.logo_uid)

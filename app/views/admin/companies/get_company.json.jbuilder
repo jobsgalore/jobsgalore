@@ -1,0 +1,1 @@
+json.extract! @company, :name, :site, :size_id, :location, :industry_id, :recrutmentagency, :description

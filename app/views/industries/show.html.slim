@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @industry.name
+p
+  strong Parrent:
+  = @industry.parrent
+p
+  strong Level:
+  = @industry.level
+
+= link_to 'Edit', edit_industry_path(@industry)
+'|
+= link_to 'Back', industries_path

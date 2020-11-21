@@ -1,0 +1,6 @@
+strong
+  |Urgent $#{Services::URGENT.price_integer} (7 day)
+=space_email
+|In a hurry? Add an Urgent tag to your job opportunity. It's a great way to attract serious offers quickly.
+div[style=button_email]
+  = link_to 'Activate', bill_url(bill: {id: @job.id, type:2, option: 1}) + "&" + @utm, style: link_email, target: "_blank"

@@ -1,0 +1,6 @@
+strong
+  |Urgent
+=space_email
+|In a hurry? Add an Urgent tag to your resume. It's a great way to attract serious offers quickly.
+//div[style=button_email]
+  = link_to 'Activate', bill_url(bill: {id: @resume.id, type:3, option: 1}) + "&" + @utm, style: link_email, target: "_blank"

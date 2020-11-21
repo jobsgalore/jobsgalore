@@ -1,0 +1,22 @@
+div[style=title_email]
+  div[style=h1_email]
+    |The option "#{@option}" was turned on
+div[style=body_email]
+  strong
+    |The resume #{@resume.title}.
+  =space_email
+  |The option "#{@option}" has successfully activated.
+  div[style=button_email]
+    = link_to 'Show', resume_url(@resume) + "&" + @utm, style: link_email, target: "_blank"
+  - if @resume.highlight.blank? or @resume.urgent.blank?
+    =space_email
+    =space_email
+    =space_email true
+    =space_email
+    div[style=h3_email]
+      |You can also activate:
+    -if @resume.highlight.blank?
+      =render 'resumes_mailer/party_of_email/highlight'
+    = space_email
+    - if @resume.urgent.blank?
+      =render 'resumes_mailer/party_of_email/urgent'

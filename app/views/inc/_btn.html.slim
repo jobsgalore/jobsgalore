@@ -1,0 +1,47 @@
+.dropdown
+  - if can?(:destroy, object)
+    - if current_client&.admin?
+      .dropdown
+        span.btn.btn-warning.btn-block[data-toggle="dropdown"]
+          |Find quickly
+          span.caret
+        ul.dropdown-menu
+          - if PropertsHelper::URGENT== "true"
+            li
+              - if object.urgent
+                = link_to "Urgent -", eval("admin_#{option[:class]}_extras_path(#{option[:class]}: {id: object, option: 1})"), method: :post
+              - else
+                = link_to "Urgent +", eval("admin_#{option[:class]}_extras_path(#{option[:class]}: {id: object, option: 1})"), method: :post
+          - if PropertsHelper::HIGHLIGHT == "true"
+            li
+              - if object.highlight
+                = link_to "Highlight -", eval("admin_#{option[:class]}_extras_path(#{option[:class]}: {id: object, option: 3})"), method: :post
+              - else
+                = link_to "Highlight +", eval("admin_#{option[:class]}_extras_path(#{option[:class]}: {id: object, option: 3})"), method: :post
+    - else
+      .btn_margin
+        = link_to("Find quickly",
+                  new_order_path(object, option[:class]),
+                  class: "btn btn-warning btn-block",
+                  rel: "nofollow")
+    - if object.class == ResumeDecorator
+      div[class = "#{(option[:cl] == 'dropdown' ? 'btn_margin' : 'btn-group')}"]
+        = link_to(contacts_of_companies_path, class: "btn btn-success btn-block", onclick: "experiment('contacts_of_companies', 'Отправил резюме');") do
+          - if option[:min]
+            i.glyphicon.glyphicon-envelope
+          - else
+            | Send to employers
+    .btn_margin
+      = link_to eval("edit_#{option[:class]}_path(object)"), class: "btn btn-primary btn-block" do
+        |Edit
+    .btn_margin
+      = link_to object, data: {confirm: 'Are you sure?'}, method: :delete, class: "btn btn-default btn-block" do
+        |Delete
+    - if current_client&.admin?
+      = render 'inc/btn/btn_send', object: object, option: option
+    - if object.class == JobDecorator && object.can_prolong?
+      .btn_margin
+        a.btn.btn-info.btn-block[href= prolong_path(object) rel="nofollow"]
+          |Prolong
+  - else
+    = render 'inc/btn/btn_send', object: object, option: option

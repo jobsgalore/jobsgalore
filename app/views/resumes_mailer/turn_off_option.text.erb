@@ -1,0 +1,11 @@
+The resume <%=@resume.title%>
+<%= resume_url(@resume) + "&" + @utm %>
+
+The option "<%=@option%>" has turned off.
+
+<%if @resume.highlight.blank? or @resume.urgent.blank?%>
+You can promote your resume:
+===================================================
+<%=render 'resumes_mailer/party_of_email/highlight.text.erb'%>
+<%=render 'resumes_mailer/party_of_email/urgent.text.erb'%>
+<%end%>

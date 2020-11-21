@@ -1,0 +1,80 @@
+doctype html
+html[lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"]
+  head
+    title
+      = content_for?(:title) ? yield(:title) : PropertsHelper::TITLE
+    link[href=image_path("icon.png") rel="shortcut icon" type="image/png"]
+    - if yield_meta_tag("canonical")!= ''
+      link[href=yield_meta_tag("canonical") rel="canonical"]
+    meta[name="yandex-verification" content="b954b69f1e183f8c"]
+    meta[name="msvalidate.01" content="1F9E0176B2E69B8F5DBB203F3B2D38B3"]
+    meta[property="fb:app_id" content="2248254480892152"]
+    meta[property="og:locale" content="en_US"]
+    meta[property="og:site_name" content=PropertsHelper::TITLE]
+    meta[property="og:type" content=yield_meta_tag("og:type", "website")]
+    meta[property="og:title" content=yield_meta_tag("og:title", PropertsHelper::TITLE)]
+    meta[property="og:description" content=yield_meta_tag("og:description", "JobsGalore is a job search aggregator in Australia. Find jobs and career related information. Find your dream job. Make job search easy with us!")]
+    meta[property="og:url" content=yield_meta_tag("og:url",root_url)]
+    meta[property="og:image" content=yield_meta_tag("og:image", image_url("jg2_3.png"))]
+    meta[name="twitter:card" content=yield_meta_tag("twitter:card", "summary")]
+    meta[name="twitter:site" content=yield_meta_tag("twitter:site", "jobsGalore_AU")]
+    meta[name="twitter:title" content=yield_meta_tag("twitter:title",  PropertsHelper::TITLE)]
+    meta[name="twitter:description" content=yield_meta_tag("twitter:description", "JobsGalore is a job search aggregator in Australia. Find jobs and career related information. Find your dream job. Make job search easy with us!")]
+    meta[name="twitter:image:src" content=yield_meta_tag("twitter:image:src",image_url("face.jpg"))]
+    - if yield_meta_tag("article:published_time")!=''
+      meta[property="article:published_time" content= yield_meta_tag("article:published_time")]
+    meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"]
+    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
+    meta[name="lang" content="en-US"]
+    /meta[name="propeller" content="fa1434c0b3d2ac30c4d92e34bb49a61c"]
+    /=render 'layouts/inc/js'
+    meta[name="description" content=yield_meta_tag("description", "JobsGalore is a job search aggregator in Australia. Find jobs and career related information. Find your dream job. Make job search easy with us!")]
+    meta[name="keywords" content=yield_meta_tag("keywords","Jobs Galore, work, job, vacancy search, resume, jobs, Australia, vacancies, employment, looking for a job, search, seek, galore, money, solary, indeed, JobsGalore, jobs in university, post job free,  post jobs for free, look for job, seeking, job board")]
+    = stylesheet_link_tag('application', media: :all)
+    /! Гуугл adSence
+    script async=true data-ad-client="ca-pub-8494804402686328" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    /! Гуугл аналитик
+    script async=true src="https://www.googletagmanager.com/gtag/js?id=UA-102893446-1"
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-102893446-1');
+    /= javascript_include_tag('application', defer: true)
+    /! HillTopAds
+    //meta[name="hilltopads-site-verification" content="d3334fee16c11498d6cd421047d7ed7cda1494c1"]
+    /! HillTopAds
+    = csrf_meta_tags
+  body
+    //javascript:
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '430364631037006',
+                xfbml: true,
+                version: 'v6.0'
+            });
+
+            // ADD ADDITIONAL FACEBOOK CODE HERE
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    .head_menu
+      = render('inc/header', search: @search)
+      = render 'inc/header/inc/alert', alert: alert, notice: notice if alert || notice
+    .wrapper
+      = yield
+    =render 'inc/invate_to_share' if cookies[:invite].blank?
+    .footer
+      =render('inc/footer')
+      //=render('ad/propeller_push_notifications_cmp') if Propert.ads_turn_on?
+  = javascript_include_tag('application', defer: true)

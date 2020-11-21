@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
+      = react_component("SendMessage",
+              name:'apply',
+              title: {name: @resume.title.capitalize, link: resume_url, id:@resume.id},
+              location:{name:@resume.location.name, id:@resume.location.id},
+              linkedin_url: client_linkedin_omniauth_authorize_url,
+              user_from_linkedin: current_client&.linkedin?,
+              linkedin_resume_url: linkedin_resume_url,
+              sign_in: new_client_session_url,
+              sign_up: client_registration_url,
+              resumes: current_client&.resumes_for_apply,
+              url_for_parse: file_to_html_url,
+              send_url:send_msg_url)

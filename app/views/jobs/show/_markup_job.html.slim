@@ -1,0 +1,46 @@
+.hidden-xs.hidden-sm.hidden-md.hidden-lg[itemscope itemtype="http://schema.org/JobPosting"]
+  meta[itemprop="specialCommitments" content="VeteranCommit"]
+  span[itemprop="title"]
+    = object.title
+  span[itemprop="datePosted"]
+    = object.created_at.strftime("%F")
+  span[itemprop="validThrough"]
+    = object.try(:close)
+  span[itemprop="employmentType"]
+    |full-time
+  span[itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization"]
+    span[itemprop="name"]
+      = object.company.name
+    span[itemprop="address"]
+      = object.company.location.name
+    span[itemprop="telephone"]
+      = object.client.phone || "empty"
+  span[itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"]
+    span[itemprop="name"]
+      = object.location.name
+    span[itemprop="telephone"]
+      = object.client.phone || "empty"
+    span[itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"]
+      span[itemprop="name"]
+        = object.location.name
+      span[itemprop="addressLocality"]
+        = object.location.suburb
+      span[itemprop="postalCode"]
+        |empty
+      span[itemprop="streetAddress"]
+        |empty
+      span itemprop="addressRegion"
+        = object.location.state
+  - if object.salary.present?
+    span[itemprop="baseSalary" itemscope itemtype="http://schema.org/MonetaryAmount"]
+      span[itemprop="currency" content="AUD"]
+      span[itemprop="minValue" content= "#{object.salarymin || 0}"]
+      -if object.salarymax
+        span[itemprop="maxValue" content= "#{object.salarymax || 0}"]
+
+  - else
+    span[itemprop="baseSalary" itemscope itemtype="http://schema.org/MonetaryAmount"]
+      span[itemprop="currency" content="AUD"]
+      span[itemprop="value" content= "0"]
+  span[itemprop="description"]
+    = object.render_description

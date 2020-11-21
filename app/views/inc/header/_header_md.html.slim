@@ -1,0 +1,20 @@
+-cache(current_client) do
+  = render 'inc/header/inc/print'
+  nav.navbar.navbar-blue[itemscope itemtype="http://schema.org/WebSite"]
+    .container
+      .hidden-md
+        .navbar-header
+          = link_to root_path ,  class: "navbar-brand" do
+            strong
+              |JobsGalore.
+            small
+              |eu
+      .hidden-lg
+        .navbar-header
+          = link_to root_path, class: "navbar-brand" do
+            strong
+              |JG
+      = render('inc/header/inc/search', search: search, key: "search_md")
+      .navbar-right
+        =render 'inc/header/client_drop_menu'
+

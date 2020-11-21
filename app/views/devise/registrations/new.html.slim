@@ -1,0 +1,6 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
+      = render 'clients/form', option:{as: resource_name, html:{enctype: "multipart/form-data"}, url: registration_path(resource_name), method: :post, devise: true}, client: @client_wf&.client || resource
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        = render 'ad/rtb_block', code: 'before_similar_job_md' if Propert.ads_turn_on?

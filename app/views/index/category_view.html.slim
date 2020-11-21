@@ -1,0 +1,14 @@
+- meta_head(  title:"#{@category_view.name[:name]} #{@category_view.name[:industry]}",
+        description: "Find job for  #{@category_view.name[:industry]} in All Australia. View all our vacancies now with new jobs added daily!",
+        keywords: @category_view.key)
+.container
+  h1 ="#{@category_view.name[:name]} #{@category_view.name[:industry]}"
+  .col-lg-8.col-md-9.col-sm-12
+    - if @category_view.type==Objects::COMPANIES
+      = render partial:'inc/company', collection: @category_view.objs, locals:{query:''}
+    - elsif @category_view.type==Objects::RESUMES
+      = render partial:'inc/resume', collection: @category_view.objs, locals:{query:''}
+    .text-center
+      = will_paginate_mini @category_view.objs
+    - if @category_view.type==Objects::RESUMES
+      =render 'inc/btn/btn_new_job_xs_sm'

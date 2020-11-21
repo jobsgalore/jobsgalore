@@ -1,0 +1,6 @@
+- if object.class == JobDecorator
+  a.btn.btn-primary.btn-block.btn-circle[href= apply_path(object) role='button'  aria-disabled='true'  rel="nofollow"]
+    |Apply
+- elsif object.class == ResumeDecorator
+  a.btn.btn-primary.btn-block.btn-circle[href= msg_path(object) role='button'  aria-disabled='true' rel="nofollow"]
+    |Message

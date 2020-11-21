@@ -1,0 +1,631 @@
+3:
+    id: 3
+    email: darwin@hays.com.au
+    company_id: 1031
+    phone: 61(0) 8 8943 6000
+    send_email: true
+    contact: false
+    location_id: 23
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &1 2019-05-27 11:03:27.093752000 Z
+      zone: &2 !ruby/object:ActiveSupport::TimeZone
+        name: Etc/UTC
+      time: *1
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &3 2019-05-27 11:03:27.093752000 Z
+      zone: *2
+      time: *3
+    fio: Hays Darwin
+    main: 
+5:
+    id: 5
+    email: citysouth@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9280 3577
+    send_email: true
+    contact: false
+    location_id: 22
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &4 2019-05-27 11:18:28.573973000 Z
+      zone: *2
+      time: *4
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &5 2019-05-27 11:18:28.573973000 Z
+      zone: *2
+      time: *5
+    fio: Sydney City South
+    main: 
+8:
+    id: 8
+    email: hurstville@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9580 8333
+    send_email: true
+    contact: false
+    location_id: 22
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &6 2019-05-27 11:18:28.579867000 Z
+      zone: *2
+      time: *6
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &7 2019-05-27 11:18:28.579867000 Z
+      zone: *2
+      time: *7
+    fio: Hurstville
+    main: 
+9:
+    id: 9
+    email: liverpool@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9601 8822
+    send_email: true
+    contact: false
+    location_id: 13
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &8 2019-05-27 11:18:28.581868000 Z
+      zone: *2
+      time: *8
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &9 2019-05-27 11:18:28.581868000 Z
+      zone: *2
+      time: *9
+    fio: Liverpool
+    main: 
+10:
+    id: 10
+    email: northsydney@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9957 5733
+    send_email: true
+    contact: false
+    location_id: 22
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &10 2019-05-27 11:35:24.692600000 Z
+      zone: *2
+      time: *10
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &11 2019-06-08 12:50:18.574551000 Z
+      zone: *2
+      time: *11
+    fio: North Sydney
+    main: 
+11:
+    id: 11
+    email: parramatta@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9635 1133
+    send_email: true
+    contact: false
+    location_id: 16
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &12 2019-05-27 11:35:24.696208000 Z
+      zone: *2
+      time: *12
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &13 2019-05-27 11:35:24.696208000 Z
+      zone: *2
+      time: *13
+    fio: Parramatta
+    main: 
+14:
+    id: 14
+    email: camberwell@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 3 9946 3500
+    send_email: true
+    contact: false
+    location_id: 61
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &14 2019-05-27 11:35:24.701924000 Z
+      zone: *2
+      time: *14
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &15 2019-05-27 11:35:24.701924000 Z
+      zone: *2
+      time: *15
+    fio: Camberwell
+    main: 
+15:
+    id: 15
+    email: mooneeponds@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 3 9326 2149
+    send_email: true
+    contact: false
+    location_id: 61
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &16 2019-05-27 11:35:24.703784000 Z
+      zone: *2
+      time: *16
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &17 2019-05-27 11:35:24.703784000 Z
+      zone: *2
+      time: *17
+    fio: Moonee Ponds
+    main: 
+16:
+    id: 16
+    email: mulgrave@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 3 8562 4250
+    send_email: true
+    contact: false
+    location_id: 61
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &18 2019-05-27 11:35:24.705670000 Z
+      zone: *2
+      time: *18
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &19 2019-05-27 11:35:24.705670000 Z
+      zone: *2
+      time: *19
+    fio: Mulgrave
+    main: 
+17:
+    id: 17
+    email: wodonga@hays.com.au
+    company_id: 1031
+    phone: 02 6062 3000
+    send_email: true
+    contact: false
+    location_id: 91
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &20 2019-05-27 11:35:24.707447000 Z
+      zone: *2
+      time: *20
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &21 2019-05-27 11:35:24.707447000 Z
+      zone: *2
+      time: *21
+    fio: Albury/Wodonga
+    main: 
+18:
+    id: 18
+    email: geelong@hays.com.au
+    company_id: 1031
+    phone: 61 3 5226 8000
+    send_email: true
+    contact: false
+    location_id: 69
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &22 2019-05-27 11:35:24.709406000 Z
+      zone: *2
+      time: *22
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &23 2019-05-27 11:35:24.709406000 Z
+      zone: *2
+      time: *23
+    fio: Geelong
+    main: 
+19:
+    id: 19
+    email: ballarat@hays.com.au
+    company_id: 1031
+    phone: 61 3 5303 9997
+    send_email: true
+    contact: false
+    location_id: 65
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &24 2019-05-27 11:35:24.711204000 Z
+      zone: *2
+      time: *24
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &25 2019-05-27 11:35:24.711204000 Z
+      zone: *2
+      time: *25
+    fio: Ballarat
+    main: 
+20:
+    id: 20
+    email: brisbane@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 7 3243 3000
+    send_email: true
+    contact: false
+    location_id: 25
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &26 2019-05-27 11:35:24.712995000 Z
+      zone: *2
+      time: *26
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &27 2019-05-27 11:35:24.712995000 Z
+      zone: *2
+      time: *27
+    fio: Brisbane CBD
+    main: 
+21:
+    id: 21
+    email: chermside@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 7 3259 4900
+    send_email: true
+    contact: false
+    location_id: 25
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &28 2019-05-27 11:35:24.714781000 Z
+      zone: *2
+      time: *28
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &29 2019-05-27 11:35:24.714781000 Z
+      zone: *2
+      time: *29
+    fio: Chermside
+    main: 
+23:
+    id: 23
+    email: adelaide@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 8 7221 4111
+    send_email: true
+    contact: false
+    location_id: 47
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &30 2019-05-27 11:50:54.540339000 Z
+      zone: *2
+      time: *30
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &31 2019-05-27 11:50:54.540339000 Z
+      zone: *2
+      time: *31
+    fio: Hays Adelaide
+    main: 
+24:
+    id: 24
+    email: canberra@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 6257 6344
+    send_email: true
+    contact: false
+    location_id: 1
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &32 2019-05-27 11:50:54.543069000 Z
+      zone: *2
+      time: *32
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &33 2019-05-27 11:50:54.543069000 Z
+      zone: *2
+      time: *33
+    fio: Hays Canberra
+    main: 
+25:
+    id: 25
+    email: perth@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 8 9254 4595
+    send_email: true
+    contact: false
+    location_id: 80
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &34 2019-05-27 11:50:54.545782000 Z
+      zone: *2
+      time: *34
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &35 2019-05-27 11:50:54.545782000 Z
+      zone: *2
+      time: *35
+    fio: Perth CBD
+    main: 
+26:
+    id: 26
+    email: BunAdmin@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 1 3003 95771
+    send_email: true
+    contact: false
+    location_id: 82
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &36 2019-05-27 11:50:54.547749000 Z
+      zone: *2
+      time: *36
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &37 2019-05-27 11:50:54.547749000 Z
+      zone: *2
+      time: *37
+    fio: Bunbury
+    main: 
+30:
+    id: 30
+    email: wollongong@hays.com.au
+    company_id: 1031
+    phone: 61 (0)2 4222 0100
+    send_email: true
+    contact: false
+    location_id: 61
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &38 2019-05-27 11:50:54.555517000 Z
+      zone: *2
+      time: *38
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &39 2019-05-27 11:50:54.555517000 Z
+      zone: *2
+      time: *39
+    fio: Wollongong
+    main: 
+31:
+    id: 31
+    email: cairns@hays.com.au
+    company_id: 1031
+    phone: 07 4049 2900
+    send_email: true
+    contact: false
+    location_id: 28
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &40 2019-05-27 11:50:54.557393000 Z
+      zone: *2
+      time: *40
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &41 2019-05-27 11:50:54.557393000 Z
+      zone: *2
+      time: *41
+    fio: Cairns
+    main: 
+32:
+    id: 32
+    email: goldcoast@hays.com.au
+    company_id: 1031
+    phone: 07 5571 0751
+    send_email: true
+    contact: false
+    location_id: 31
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &42 2019-05-27 11:50:54.559293000 Z
+      zone: *2
+      time: *42
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &43 2019-05-27 11:50:54.559293000 Z
+      zone: *2
+      time: *43
+    fio: Gold Coast
+    main: 
+33:
+    id: 33
+    email: ipswich@hays.com.au
+    company_id: 1031
+    phone: 07 3817 1900
+    send_email: true
+    contact: false
+    location_id: 34
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &44 2019-05-27 11:50:54.561136000 Z
+      zone: *2
+      time: *44
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &45 2019-05-27 11:50:54.561136000 Z
+      zone: *2
+      time: *45
+    fio: Ipswich
+    main: 
+35:
+    id: 35
+    email: maroochydore@hays.com.au
+    company_id: 1031
+    phone: 07 5412 1100
+    send_email: true
+    contact: false
+    location_id: 40
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &46 2019-05-27 11:50:54.565003000 Z
+      zone: *2
+      time: *46
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &47 2019-05-27 11:50:54.565003000 Z
+      zone: *2
+      time: *47
+    fio: Sunshine Coast - Maroochydore
+    main: 
+36:
+    id: 36
+    email: mtisa@hays.com.au
+    company_id: 1031
+    phone: 07 4960 1121
+    send_email: true
+    contact: false
+    location_id: 38
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &48 2019-05-27 11:50:54.566815000 Z
+      zone: *2
+      time: *48
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &49 2019-05-27 11:50:54.566815000 Z
+      zone: *2
+      time: *49
+    fio: Mt Isa
+    main: 
+37:
+    id: 37
+    email: townsville@hays.com.au
+    company_id: 1031
+    phone: 07 4771 5100
+    send_email: true
+    contact: false
+    location_id: 42
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &50 2019-05-27 11:50:54.568645000 Z
+      zone: *2
+      time: *50
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &51 2019-05-27 11:50:54.568645000 Z
+      zone: *2
+      time: *51
+    fio: Townsville
+    main: 
+6:
+    id: 6
+    email: burwood@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9744 3344
+    send_email: true
+    contact: false
+    location_id: 22
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &52 2019-05-27 11:18:28.576051000 Z
+      zone: *2
+      time: *52
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &53 2019-06-08 12:50:18.566322000 Z
+      zone: *2
+      time: *53
+    fio: Burwood
+    main: 
+7:
+    id: 7
+    email: chatswood@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 9411 8122
+    send_email: true
+    contact: false
+    location_id: 22
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &54 2019-05-27 11:18:28.577959000 Z
+      zone: *2
+      time: *54
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &55 2019-06-08 12:50:18.571946000 Z
+      zone: *2
+      time: *55
+    fio: Chatswood
+    main: 
+12:
+    id: 12
+    email: melbourne@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 3 9604 9600
+    send_email: true
+    contact: false
+    location_id: 61
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &56 2019-05-27 11:35:24.698152000 Z
+      zone: *2
+      time: *56
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &57 2019-06-08 12:50:18.578292000 Z
+      zone: *2
+      time: *57
+    fio: Melbourne CBD
+    main: true
+13:
+    id: 13
+    email: stkildaroad@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 3 9804 5313
+    send_email: true
+    contact: false
+    location_id: 61
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &58 2019-05-27 11:35:24.700026000 Z
+      zone: *2
+      time: *58
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &59 2019-06-08 12:50:18.580811000 Z
+      zone: *2
+      time: *59
+    fio: St Kilda Road
+    main: 
+27:
+    id: 27
+    email: hobart@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 3 6234 9554
+    send_email: true
+    contact: false
+    location_id: 57
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &60 2019-05-27 11:50:54.549710000 Z
+      zone: *2
+      time: *60
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &61 2019-06-08 12:50:18.601114000 Z
+      zone: *2
+      time: *61
+    fio: Hobart
+    main: 
+28:
+    id: 28
+    email: launceston@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 363339400
+    send_email: true
+    contact: false
+    location_id: 60
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &62 2019-05-27 11:50:54.551643000 Z
+      zone: *2
+      time: *62
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &63 2019-06-08 12:50:18.603681000 Z
+      zone: *2
+      time: *63
+    fio: Launceston
+    main: 
+29:
+    id: 29
+    email: newcastle@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 4925 3663
+    send_email: true
+    contact: false
+    location_id: 14
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &64 2019-05-27 11:50:54.553696000 Z
+      zone: *2
+      time: *64
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &65 2019-06-08 12:50:18.606338000 Z
+      zone: *2
+      time: *65
+    fio: Newcastle
+    main: 
+34:
+    id: 34
+    email: mackay@hays.com.au
+    company_id: 1031
+    phone: 07 4960 1100
+    send_email: true
+    contact: false
+    location_id: 36
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &66 2019-05-27 11:50:54.563005000 Z
+      zone: *2
+      time: *66
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &67 2019-06-08 12:50:18.613926000 Z
+      zone: *2
+      time: *67
+    fio: Mackay
+    main: 
+4:
+    id: 4
+    email: sydney@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 2 8226 9600
+    send_email: true
+    contact: false
+    location_id: 22
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &68 2019-05-27 11:18:28.567355000 Z
+      zone: *2
+      time: *68
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &69 2019-06-08 12:50:18.554076000 Z
+      zone: *2
+      time: *69
+    fio: Sydney CBD
+    main: 
+22:
+    id: 22
+    email: mtgravatt@hays.com.au
+    company_id: 1031
+    phone: 61 (0) 7 3349 6563
+    send_email: true
+    contact: false
+    location_id: 25
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &70 2019-05-27 11:35:24.716578000 Z
+      zone: *2
+      time: *70
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &71 2019-06-08 12:50:18.593580000 Z
+      zone: *2
+      time: *71
+    fio: Mt Gravatt
+    main: 

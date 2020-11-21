@@ -1,0 +1,1 @@
+json.extract! industry, :id, :name

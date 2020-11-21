@@ -1,0 +1,56 @@
+.container-fluid
+  h1 Jobs
+  .col-md-6.col-lg-6
+    = link_to 'Back', admin_company_team_path(@company) , class: "btn btn-success btn-block"
+    p
+  .col-md-6.col-lg-6
+    = link_to 'New job', admin_new_job_path("#{@client.id}x#{@company}"), class:"btn btn-primary btn-block "
+    p
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th ID
+        th Title
+        th Locations
+        th Industry
+        th Salarymin
+        th Salarymax
+        th Description
+        th Posted
+        th Updated
+        th Close
+        - if PropertsHelper::URGENT=="true"
+          th Urgent
+        -if PropertsHelper::TOP == "true"
+          th Top
+        -if PropertsHelper::HIGHLIGHT == "true"
+          th Highlight
+        th
+        th
+        th
+
+    tbody
+      - @jobs.all.each do |job|
+        tr
+          td = job.id
+          td = job.title
+          td = "#{job.location.suburb}, #{job.location.state}"
+          td = job.industry.all.first&.name
+          td = job.salarymin
+          td = job.salarymax
+          td = job.description.truncate(50, separator: " ")
+          td = job.created_at&.strftime('%d.%m.%Y')
+          td = job.updated_at&.strftime('%d.%m.%Y')
+          td = job.close&.strftime('%d.%m.%Y')
+          - if PropertsHelper::URGENT=="true"
+            td = job.urgent
+          - if PropertsHelper::TOP == "true"
+            td = job.top
+          - if PropertsHelper::HIGHLIGHT == "true"
+            td = job.highlight
+          td = link_to 'Show', admin_show_job_path(job.id), class: "btn btn-primary btn-block "
+          td = link_to 'Destroy', admin_destroy_job_path(job.id), data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger btn-block "
+
+  br
+
+  = will_paginate_mini @jobs

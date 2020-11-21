@@ -1,0 +1,36 @@
+.border_radius_left {
+  border-radius: 20px 0 0 20px;
+}
+
+.border_radius_is_not {
+  border-radius: 0 0 0 0;
+  border-left: 0;
+  /*border-right: 0;*/
+}
+
+.border_radius_rigth {
+  border-radius: 0 20px 20px 0;
+  border-left: 0;
+}
+
+.btn_options{
+  margin-left: 10px;
+  border-radius: 20px;
+  width: 50px;
+}
+
+.select_search{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 20px;
+}
+
+.dropdown-menu-height{
+  max-height:150px;
+  overflow-y:scroll;
+}
+
+.indent{
+  margin-left:10px;
+}

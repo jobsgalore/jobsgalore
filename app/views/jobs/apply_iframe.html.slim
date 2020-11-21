@@ -1,0 +1,19 @@
+.container
+  .row
+    .col-sm-offset-2.col-md-offset-2.col-lg-offset-2.col-xs-12.col-sm-8.col-md-8.col-lg-8
+      .panel.panel-default
+        .panel-heading
+          h4.panel-title
+            |External Reference
+        .panel-body
+          .text-center
+            | Open a job #{link_to @job.title, @job.apply, target: "_blank", onclick: "setInterval(() => {window.location.href= '#{@url}'}, 10)" }
+        .panel-body
+          .col-xs-6.col-sm-6.col-md-6.col-lg-6
+            =link_to("Cancel", job_path(@job), class: "btn btn-default btn-block")
+          .col-xs-6.col-sm-6.col-md-6.col-lg-6
+            =link_to("Ok", @job.apply,
+                    class: "btn btn-primary btn-block",
+                    target: "_blank",
+                    onclick: "setInterval(() => {window.location.href= '#{@url}'}, 10)" )
+    .col-sm-offset-2.col-md-offset-2.col-lg-offset-2.col-xs-12.col-sm-8.col-md-8.col-lg-8

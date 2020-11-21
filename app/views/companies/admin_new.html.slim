@@ -1,0 +1,5 @@
+.container
+  h1 New company
+  = form_for @company, url: { action: "admin_create" } do |f|
+    == render 'admin_form',f:f
+

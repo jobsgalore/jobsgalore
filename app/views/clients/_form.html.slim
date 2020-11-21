@@ -1,0 +1,71 @@
+-option||={}
+= form_for client,as: option[:as], html:option[:html], url:option[:url], method:option[:method]  do |f|
+  - if client.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(client.errors.count, "error")} prohibited this client from being saved:"
+      ul
+        - client.errors.full_messages.each do |message|
+          li = message
+  -if option[:devise]
+    h4.line.text-center
+      |Log in with
+    br
+    = render 'devise/shared/oauth'
+    h3.line.text-center
+      |or Sign up
+    br
+  .row
+    .col-xs-12.col-sm-12.col-md-12
+      .form-group
+        = f.label :full_name, '*Your full name'
+        br
+        = f.text_field :full_name, autofocus: true, class:"form-control",placeholder:"Homer Simpson", required:"required"
+  -unless (option[:url]== {:action=>"create_member"}) || (option[:devise])
+    .form-group
+      = f.label "Gender"
+        br
+      =f.select(:gender, options_for_select([['Male','false'],['Female','true']],client.gender),{}, {class:'form-control','data-style':"btn-default"})
+    br
+  .form-group
+    = f.label :location, "*Your location"
+    br
+    = react_component('Autocomplete',
+              className: "form-control dropdown-toggle",
+              name: "client[location",
+              id: "client_location_id",
+              route: '/search_locations/',
+              defaultName: client.location ? client.location.name :  Location.default.name,
+              defaultId: client.location ? client.location.id :  Location.default.id)
+  .form-group
+    = f.label :phone, "Your phone number"
+    em
+      |&nbsp;(optional)
+    br
+    = react_component('InputMask', id: "phone", name: "client[phone]", class_name: "form-control", dataformat: "dd dddd dddddd", placeholder: "02 9999 9999",defaultValue:@client&.phone)
+  -if (option[:url]== {:action=>"create_member"}) || (option[:devise])
+    .form-group
+      = f.label :email, "*Your email", required:"required"
+      br
+      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "surname@hotmail.com", required:"required"
+    .form-group
+      = f.label :password, "*Password"
+      - if @minimum_password_length
+        em
+          = " (#{@minimum_password_length} characters minimum)"
+      br
+      = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "**************", required:"required"
+  -if option[:devise]
+    .row
+      .col-xs-6.col-md-6
+        = link_to "Log in", new_session_path(resource_name), class: "btn btn-success btn-block"
+        br
+      .col-xs-6.col-md-6
+        = f.submit "Sign up", class: "btn btn-primary btn-block"
+        br
+  -else
+    .row
+      .col-xs-12.col-sm-6.col-md-6
+        = link_to 'Back', :back, class:"btn btn-success btn-block "
+      .col-xs-12.col-sm-6.col-md-6
+        = f.submit "Add", class: "btn btn-primary btn-block"
+  br

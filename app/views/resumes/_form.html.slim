@@ -1,0 +1,66 @@
+-option||={}
+= form_for @resume, url:option[:url] do |f|
+  hr.colorgraph
+  - if @resume.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@resume.errors.count, "error")} prohibited this resume from being saved:"
+      ul
+        - @resume.errors.full_messages.each do |message|
+          li = message
+  .row
+    .form-group
+      - if 1 == 2 && current_client&.linkedin?    #TODO it do not work / lonkedin
+        .col-xs-12.col-md-6.col-sm-6.col-lg-6
+          a.btn.btn-linkedin.btn-block.linkedin_click.social-share-button[onclick = "experiment('create_resume', 'Резюме из линкдин. Заходим из кнопки. Авторизованы');"]
+            i.ssb-icon.ssb-linkedin.text-left.btn[aria-hidden="true"]
+            |&nbsp;|&nbsp;Resume from LinkedIn
+      - elsif 1 == 2  &&  current_client.nil? #TODO it do not work / lonkedin
+        .col-xs-12.col-md-6.col-sm-6.col-lg-6.social-share-button
+          = link_to client_linkedin_omniauth_authorize_path(resume: true), class: "btn btn-linkedin btn-block", onclick: "experiment('create_resume', 'Резюме из линкдин. Заходим из кнопки. НЕ Авторизованы');" do
+            i.ssb-icon.ssb-linkedin.text-left.btn[aria-hidden="true"]
+            |&nbsp;|&nbsp;Resume from LinkedIn
+      .col-xs-12.col-md-6.col-sm-6.col-lg-6
+        .hidden-md.hidden-lg.hidden-sm
+          p
+        label.btn.btn-warning.btn-block[for="inp"]
+          i.glyphicon.glyphicon-upload
+          |&nbsp;|&nbsp;Upload a resume (.txt .docx)
+          input#inp[type="file" accept=".txt, .docx" style="display:none;" ]
+  p
+  .form-group
+    = f.label :title, "Desired Job"
+    br
+    = f.text_field :title, class:"form-control", required:"required"
+  .row
+    .col-md-6.col-lx-6.col-sm-12.col-xs-12
+      .form-group
+        = f.label :salary, "Desired Salary"
+        em
+          |&nbsp;(Optional)
+        br
+        = salary f, :salary_form, class:"form-control", placeholder: "10000"
+    .col-md-6.col-lx-6.col-sm-12.col-xs-12
+      .form-group
+        = f.label :industry, "Location"
+        br
+        = react_component('Autocomplete',
+                className: "form-control dropdown-toggle",
+                name: "resume[location",
+                id: "resume_location_id",
+                route:'/search_locations/',
+                defaultName: @resume.location ? @resume.location.name : (current_client ? current_client.location.name : Location.default.name),
+                defaultId: @resume.location ? @resume.location.id : (current_client ? current_client.location.id: Location.default.id))
+  .form-group
+    =f.label :industry, "Professional area"
+    br
+    = f.collection_select(:industry_id, Industry.select(:id,:name).all, :id, :name, {prompt: true},{class:"form-control"})
+  .form-group
+    = f.label  :description, "Skills, experience, education and other information"
+    br
+    = f.text_area :description,  id:"editor_resume", class: "none",  contenteditable:false
+    trix-editor[input="editor_resume" ]
+  hr.colorgraph
+    .row
+      .col-md-6.col-md-offset-6
+        = f.submit "Post a resume", class: "btn btn-primary btn-block ", onclick: "experiment('create_resume', 'Заходим из кнопки.');"
+    br

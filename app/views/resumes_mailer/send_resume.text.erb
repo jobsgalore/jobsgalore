@@ -1,0 +1,16 @@
+<%if @current_client %>
+<%= @resume.client.full_name %>
+<%end%>
+<%= @resume.title  %>
+<% if not @resume.salary.blank? then %>
+Desired Salary: $ <%= @resume.salary.to_i.to_s%>
+<% end %>
+<%=HtmlToPlainText.plain_text(@resume.description).squish.truncate(300, separator: ' ',omission: '') + "..." %>
+
+<%=resume_url(@resume) %>
+
+--------------------------------
+
+<%= "#{ root_url } - More resumes in real time." %>
+
+<%= render "inc_mailer/post_job_free"%>

@@ -1,0 +1,10 @@
+.container
+  =render 'clients/admin_show'
+
+  .col-md-6.col-lg-6
+    = link_to 'Edit information', admin_client_edit_path(@client), class: "btn btn-primary btn-block"
+  .col-md-6.col-lg-6
+    = link_to 'Update photo', admin_client_edit_photo_path(@client), class: "btn btn-primary btn-block"
+  .col-md-6.col-lg-6
+    = link_to 'Back', admin_client_path, class: "btn btn-success btn-block"
+

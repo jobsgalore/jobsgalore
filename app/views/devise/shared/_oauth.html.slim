@@ -1,0 +1,24 @@
+.form-group
+  .row.hidden-xs.social-share-button
+    .col-sm-4.col-md-4.col-lg-4
+      = link_to client_linkedin_omniauth_authorize_path, class: "btn btn-linkedin btn-block" do
+        i.ssb-icon.ssb-linkedin.text-left.btn[aria-hidden="true"]
+        |&nbsp;|&nbsp;LinkedIn
+    .col-sm-4.col-md-4.col-lg-4
+      = link_to client_google_oauth2_omniauth_authorize_path, class: "btn btn-google btn-block" do
+        i.ssb-icon.ssb-google_plus.text-left.btn[aria-hidden="true"]
+        |&nbsp;|&nbsp;Google
+    .col-sm-4.col-md-4.col-lg-4
+      = link_to client_facebook_omniauth_authorize_path, class: "btn btn-facebook btn-block" do
+        i.ssb-icon.ssb-facebook.text-left.btn[aria-hidden="true"]
+        |&nbsp;|&nbsp;Facebook
+  .row.social-share-button.hidden-md.hidden-sm.hidden-lg
+    .col-xs-4
+      = link_to client_linkedin_omniauth_authorize_path, class: "btn btn-linkedin btn-block" do
+        i.ssb-icon.ssb-linkedin.text-left.btn[aria-hidden="true"]
+    .col-xs-4
+      = link_to client_google_oauth2_omniauth_authorize_path, class: "btn btn-google btn-block" do
+        i.ssb-icon.ssb-google_plus.text-left.btn[aria-hidden="true"]
+    .col-xs-4
+      = link_to client_facebook_omniauth_authorize_path, class: "btn btn-facebook btn-block" do
+        i.ssb-icon.ssb-facebook.text-left.btn[aria-hidden="true"]

@@ -1,0 +1,22 @@
+-cookies[:invite]= {value: true, expires: 12.months}
+.modal.fade#invate_to_share[tabindex="-1" role="dialog"]
+  .modal-dialog[role="document"]
+    .modal-content
+      .modal-header
+        button.close[type="button" data-dismiss="modal" aria-label="Close"]
+          span[aria-hidden="true"]
+            |&times;
+        h4.modal-title.text-center
+          |Could you help us?
+      .modal-body
+        |JobsGalore is a young project. Could you help us? Could you tell your friends about us? Please share a link to JobsGalore.
+        br
+        br
+        |Thank you in advance
+      .modal-footer.text-center
+        button.btn.btn-default.pull-left.hidden-sm.hidden-xs[type="button" data-dismiss="modal"]
+          |No, thanks
+        button.btn.btn-default.pull-left.hidden-md.hidden-lg[type="button" data-dismiss="modal"]
+          span.glyphicon.glyphicon-ban-circle
+        .btn-group
+          = social_button_in_invite

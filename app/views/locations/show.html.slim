@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Postcode:
+  = @location.postcode
+p
+  strong Suburb:
+  = @location.suburb
+p
+  strong State:
+  = @location.state
+
+= link_to 'Edit', edit_location_path(@location)
+'|
+= link_to 'Back', locations_path

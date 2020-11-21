@@ -1,0 +1,1681 @@
+48:
+    id: 48
+    postcode: 
+    suburb: Mount Barker
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &1 2017-07-14 08:49:05.278635000 Z
+      zone: &2 !ruby/object:ActiveSupport::TimeZone
+        name: Etc/UTC
+      time: *1
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &3 2019-07-13 09:45:08.517428000 Z
+      zone: *2
+      time: *3
+    parent_id: 
+    fts: "'barker':2 'mount':1 'sa':3"
+    counts_jobs: 4660
+21:
+    id: 21
+    postcode: 
+    suburb: Wollongong
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &4 2017-07-14 08:49:05.140517000 Z
+      zone: *2
+      time: *4
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &5 2019-07-13 12:45:12.446720000 Z
+      zone: *2
+      time: *5
+    parent_id: 
+    fts: "'nsw':2 'wollongong':1"
+    counts_jobs: 1848
+5:
+    id: 5
+    postcode: 
+    suburb: Blue Mountains
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &6 2017-07-14 08:49:05.055863000 Z
+      zone: *2
+      time: *6
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &7 2019-07-13 10:45:07.603750000 Z
+      zone: *2
+      time: *7
+    parent_id: 
+    fts: "'blue':1 'mountain':2 'nsw':3"
+    counts_jobs: 1115
+20:
+    id: 20
+    postcode: 
+    suburb: Wagga Wagga
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &8 2017-07-14 08:49:05.135197000 Z
+      zone: *2
+      time: *8
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &9 2019-07-13 09:45:09.795143000 Z
+      zone: *2
+      time: *9
+    parent_id: 
+    fts: "'nsw':3 'wagga':1,2"
+    counts_jobs: 341
+37:
+    id: 37
+    postcode: 
+    suburb: Maryborough
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &10 2017-07-14 08:49:05.223856000 Z
+      zone: *2
+      time: *10
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &11 2019-07-13 00:45:08.316997000 Z
+      zone: *2
+      time: *11
+    parent_id: 
+    fts: "'maryborough':1 'qld':2"
+    counts_jobs: 122
+36:
+    id: 36
+    postcode: 
+    suburb: Mackay
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &12 2017-07-14 08:49:05.218974000 Z
+      zone: *2
+      time: *12
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &13 2019-07-13 12:45:12.565026000 Z
+      zone: *2
+      time: *13
+    parent_id: 
+    fts: "'mackay':1 'qld':2"
+    counts_jobs: 816
+10:
+    id: 10
+    postcode: 
+    suburb: Goulburn
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &14 2017-07-14 08:49:05.081007000 Z
+      zone: *2
+      time: *14
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &15 2019-07-13 01:45:09.878445000 Z
+      zone: *2
+      time: *15
+    parent_id: 
+    fts: "'goulburn':1 'nsw':2"
+    counts_jobs: 114
+35:
+    id: 35
+    postcode: 
+    suburb: Logan City
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &16 2017-07-14 08:49:05.213942000 Z
+      zone: *2
+      time: *16
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &17 2019-07-13 10:45:10.276758000 Z
+      zone: *2
+      time: *17
+    parent_id: 
+    fts: "'citi':2 'logan':1 'qld':3"
+    counts_jobs: 10856
+33:
+    id: 33
+    postcode: 
+    suburb: Hervey Bay
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &18 2017-07-14 08:49:05.204085000 Z
+      zone: *2
+      time: *18
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &19 2019-07-13 10:45:10.289397000 Z
+      zone: *2
+      time: *19
+    parent_id: 
+    fts: "'bay':2 'hervey':1 'qld':3"
+    counts_jobs: 175
+81:
+    id: 81
+    postcode: 
+    suburb: Albany
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &20 2017-07-14 08:49:05.446786000 Z
+      zone: *2
+      time: *20
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &21 2019-07-13 05:45:12.672006000 Z
+      zone: *2
+      time: *21
+    parent_id: 
+    fts: "'albani':1 'wa':2"
+    counts_jobs: 92
+27:
+    id: 27
+    postcode: 
+    suburb: Caboolture
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &22 2017-07-14 08:49:05.171723000 Z
+      zone: *2
+      time: *22
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &23 2019-07-13 10:45:10.676792000 Z
+      zone: *2
+      time: *23
+    parent_id: 
+    fts: "'cabooltur':1 'qld':2"
+    counts_jobs: 9680
+4:
+    id: 4
+    postcode: 
+    suburb: Bathurst
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &24 2017-07-14 08:49:05.050388000 Z
+      zone: *2
+      time: *24
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &25 2019-07-13 08:45:11.330752000 Z
+      zone: *2
+      time: *25
+    parent_id: 
+    fts: "'bathurst':1 'nsw':2"
+    counts_jobs: 463
+72:
+    id: 72
+    postcode: 
+    suburb: Latrobe City
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &26 2017-07-14 08:49:05.400597000 Z
+      zone: *2
+      time: *26
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &27 2019-07-12 16:45:11.507059000 Z
+      zone: *2
+      time: *27
+    parent_id: 
+    fts: "'citi':2 'latrob':1 'vic':3"
+    counts_jobs: 145
+87:
+    id: 87
+    postcode: 
+    suburb: Kalgoorlie
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &28 2017-07-14 08:49:05.486184000 Z
+      zone: *2
+      time: *28
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &29 2019-07-12 16:45:11.534844000 Z
+      zone: *2
+      time: *29
+    parent_id: 
+    fts: "'kalgoorli':1 'wa':2"
+    counts_jobs: 376
+11:
+    id: 11
+    postcode: 
+    suburb: Grafton
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &30 2017-07-14 08:49:05.087496000 Z
+      zone: *2
+      time: *30
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &31 2019-07-13 00:45:10.634293000 Z
+      zone: *2
+      time: *31
+    parent_id: 
+    fts: "'grafton':1 'nsw':2"
+    counts_jobs: 95
+40:
+    id: 40
+    postcode: 
+    suburb: Sunshine Coast
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &32 2017-07-14 08:49:05.238698000 Z
+      zone: *2
+      time: *32
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &33 2019-07-13 12:45:13.823066000 Z
+      zone: *2
+      time: *33
+    parent_id: 
+    fts: "'coast':2 'qld':3 'sunshin':1"
+    counts_jobs: 976
+42:
+    id: 42
+    postcode: 
+    suburb: Townsville
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &34 2017-07-14 08:49:05.248542000 Z
+      zone: *2
+      time: *34
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &35 2019-07-13 09:45:13.350988000 Z
+      zone: *2
+      time: *35
+    parent_id: 
+    fts: "'qld':2 'townsvill':1"
+    counts_jobs: 869
+38:
+    id: 38
+    postcode: 
+    suburb: Mount Isa
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &36 2017-07-14 08:49:05.228999000 Z
+      zone: *2
+      time: *36
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &37 2019-07-12 16:45:12.607834000 Z
+      zone: *2
+      time: *37
+    parent_id: 
+    fts: "'isa':2 'mount':1 'qld':3"
+    counts_jobs: 211
+53:
+    id: 53
+    postcode: 
+    suburb: Port Pirie
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &38 2017-07-14 08:49:05.303997000 Z
+      zone: *2
+      time: *38
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &39 2019-07-12 16:45:12.620806000 Z
+      zone: *2
+      time: *39
+    parent_id: 
+    fts: "'piri':2 'port':1 'sa':3"
+    counts_jobs: 136
+8:
+    id: 8
+    postcode: 
+    suburb: Cessnock
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &40 2017-07-14 08:49:05.071168000 Z
+      zone: *2
+      time: *40
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &41 2019-07-13 12:45:13.922663000 Z
+      zone: *2
+      time: *41
+    parent_id: 
+    fts: "'cessnock':1 'nsw':2"
+    counts_jobs: 2439
+61:
+    id: 61
+    postcode: 
+    suburb: Melbourne
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &42 2017-07-14 08:49:05.344323000 Z
+      zone: *2
+      time: *42
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &43 2019-07-13 12:45:14.471873000 Z
+      zone: *2
+      time: *43
+    parent_id: 
+    fts: "'melbourn':1 'vic':2"
+    counts_jobs: 16038
+69:
+    id: 69
+    postcode: 
+    suburb: Geelong
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &44 2017-07-14 08:49:05.385651000 Z
+      zone: *2
+      time: *44
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &45 2019-07-13 12:45:14.627467000 Z
+      zone: *2
+      time: *45
+    parent_id: 
+    fts: "'geelong':1 'vic':2"
+    counts_jobs: 1405
+39:
+    id: 39
+    postcode: 
+    suburb: Rockhampton
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &46 2017-07-14 08:49:05.233858000 Z
+      zone: *2
+      time: *46
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &47 2019-07-13 05:45:13.166265000 Z
+      zone: *2
+      time: *47
+    parent_id: 
+    fts: "'qld':2 'rockhampton':1"
+    counts_jobs: 521
+94:
+    id: 94
+    postcode: 
+    suburb: Warburton
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &48 2019-01-15 05:42:46.060661000 Z
+      zone: *2
+      time: *48
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &49 2019-07-13 10:45:11.507420000 Z
+      zone: *2
+      time: *49
+    parent_id: 
+    fts: "'vic':2 'warburton':1"
+    counts_jobs: 2208
+1:
+    id: 1
+    postcode: 
+    suburb: Canberra
+    state: ACT
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &50 2017-07-14 08:49:05.029879000 Z
+      zone: *2
+      time: *50
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &51 2019-07-13 10:45:11.710020000 Z
+      zone: *2
+      time: *51
+    parent_id: 
+    fts: "'act':2 'canberra':1"
+    counts_jobs: 4180
+74:
+    id: 74
+    postcode: 
+    suburb: Mildura
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &52 2017-07-14 08:49:05.410522000 Z
+      zone: *2
+      time: *52
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &53 2019-07-13 07:45:10.776376000 Z
+      zone: *2
+      time: *53
+    parent_id: 
+    fts: "'mildura':1 'vic':2"
+    counts_jobs: 200
+19:
+    id: 19
+    postcode: 
+    suburb: Tamworth
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &54 2017-07-14 08:49:05.130204000 Z
+      zone: *2
+      time: *54
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &55 2019-07-13 01:45:12.705129000 Z
+      zone: *2
+      time: *55
+    parent_id: 
+    fts: "'nsw':2 'tamworth':1"
+    counts_jobs: 208
+66:
+    id: 66
+    postcode: 
+    suburb: Bendigo
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &56 2017-07-14 08:49:05.369329000 Z
+      zone: *2
+      time: *56
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &57 2019-07-13 09:45:14.186363000 Z
+      zone: *2
+      time: *57
+    parent_id: 
+    fts: "'bendigo':1 'vic':2"
+    counts_jobs: 454
+30:
+    id: 30
+    postcode: 
+    suburb: Gladstone
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &58 2017-07-14 08:49:05.187480000 Z
+      zone: *2
+      time: *58
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &59 2019-07-13 10:45:11.730089000 Z
+      zone: *2
+      time: *59
+    parent_id: 
+    fts: "'gladston':1 'qld':2"
+    counts_jobs: 271
+71:
+    id: 71
+    postcode: 
+    suburb: Horsham
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &60 2017-07-14 08:49:05.395713000 Z
+      zone: *2
+      time: *60
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &61 2019-07-12 20:45:12.962254000 Z
+      zone: *2
+      time: *61
+    parent_id: 
+    fts: "'horsham':1 'vic':2"
+    counts_jobs: 95
+14:
+    id: 14
+    postcode: 
+    suburb: Newcastle
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &62 2017-07-14 08:49:05.103821000 Z
+      zone: *2
+      time: *62
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &63 2019-07-13 12:45:14.700266000 Z
+      zone: *2
+      time: *63
+    parent_id: 
+    fts: "'newcastl':1 'nsw':2"
+    counts_jobs: 2247
+43:
+    id: 43
+    postcode: 
+    suburb: Charters Towers
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &64 2017-07-14 08:49:05.253484000 Z
+      zone: *2
+      time: *64
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &65 2019-07-13 05:45:14.066349000 Z
+      zone: *2
+      time: *65
+    parent_id: 
+    fts: "'charter':1 'qld':3 'tower':2"
+    counts_jobs: 18
+64:
+    id: 64
+    postcode: 
+    suburb: Benalla
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &66 2017-07-14 08:49:05.359381000 Z
+      zone: *2
+      time: *66
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &67 2019-07-12 23:45:12.458537000 Z
+      zone: *2
+      time: *67
+    parent_id: 
+    fts: "'benalla':1 'vic':2"
+    counts_jobs: 145
+22:
+    id: 22
+    postcode: 
+    suburb: Sydney
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &68 2017-07-14 08:49:05.145488000 Z
+      zone: *2
+      time: *68
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &69 2019-07-13 12:45:15.229422000 Z
+      zone: *2
+      time: *69
+    parent_id: 
+    fts: "'nsw':2 'sydney':1"
+    counts_jobs: 18280
+62:
+    id: 62
+    postcode: 
+    suburb: Ararat
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &70 2017-07-14 08:49:05.349420000 Z
+      zone: *2
+      time: *70
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &71 2019-07-12 16:45:13.678011000 Z
+      zone: *2
+      time: *71
+    parent_id: 
+    fts: "'ararat':1 'vic':2"
+    counts_jobs: 67
+6:
+    id: 6
+    postcode: 
+    suburb: Broken Hill
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &72 2017-07-14 08:49:05.061359000 Z
+      zone: *2
+      time: *72
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &73 2019-07-12 22:45:13.523765000 Z
+      zone: *2
+      time: *73
+    parent_id: 
+    fts: "'broken':1 'hill':2 'nsw':3"
+    counts_jobs: 67
+89:
+    id: 89
+    postcode: 
+    suburb: Karratha
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &74 2017-07-14 08:49:05.497832000 Z
+      zone: *2
+      time: *74
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &75 2019-07-12 16:45:14.338009000 Z
+      zone: *2
+      time: *75
+    parent_id: 
+    fts: "'karratha':1 'wa':2"
+    counts_jobs: 175
+76:
+    id: 76
+    postcode: 
+    suburb: Shepparton
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &76 2017-07-14 08:49:05.421376000 Z
+      zone: *2
+      time: *76
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &77 2019-07-13 09:45:14.798188000 Z
+      zone: *2
+      time: *77
+    parent_id: 
+    fts: "'shepparton':1 'vic':2"
+    counts_jobs: 362
+16:
+    id: 16
+    postcode: 
+    suburb: Parramatta
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &78 2017-07-14 08:49:05.115166000 Z
+      zone: *2
+      time: *78
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &79 2019-07-13 12:45:15.709126000 Z
+      zone: *2
+      time: *79
+    parent_id: 
+    fts: "'nsw':2 'parramatta':1"
+    counts_jobs: 18237
+3:
+    id: 3
+    postcode: 
+    suburb: Armidale
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &80 2017-07-14 08:49:05.044426000 Z
+      zone: *2
+      time: *80
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &81 2019-07-13 08:45:15.265146000 Z
+      zone: *2
+      time: *81
+    parent_id: 
+    fts: "'armidal':1 'nsw':2"
+    counts_jobs: 114
+24:
+    id: 24
+    postcode: 
+    suburb: Palmerston
+    state: NT
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &82 2017-07-14 08:49:05.155378000 Z
+      zone: *2
+      time: *82
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &83 2019-07-13 09:45:15.048801000 Z
+      zone: *2
+      time: *83
+    parent_id: 
+    fts: "'nt':2 'palmerston':1"
+    counts_jobs: 987
+12:
+    id: 12
+    postcode: 
+    suburb: Lithgow
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &84 2017-07-14 08:49:05.093146000 Z
+      zone: *2
+      time: *84
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &85 2019-07-13 04:45:12.790056000 Z
+      zone: *2
+      time: *85
+    parent_id: 
+    fts: "'lithgow':1 'nsw':2"
+    counts_jobs: 176
+85:
+    id: 85
+    postcode: 
+    suburb: Geraldton
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &86 2017-07-14 08:49:05.475155000 Z
+      zone: *2
+      time: *86
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &87 2019-07-12 16:45:14.877273000 Z
+      zone: *2
+      time: *87
+    parent_id: 
+    fts: "'geraldton':1 'wa':2"
+    counts_jobs: 190
+23:
+    id: 23
+    postcode: 
+    suburb: Darwin
+    state: NT
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &88 2017-07-14 08:49:05.150398000 Z
+      zone: *2
+      time: *88
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &89 2019-07-13 09:45:15.076458000 Z
+      zone: *2
+      time: *89
+    parent_id: 
+    fts: "'darwin':1 'nt':2"
+    counts_jobs: 989
+9:
+    id: 9
+    postcode: 
+    suburb: Dubbo
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &90 2017-07-14 08:49:05.076031000 Z
+      zone: *2
+      time: *90
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &91 2019-07-13 10:45:06.898009000 Z
+      zone: *2
+      time: *91
+    parent_id: 
+    fts: "'dubbo':1 'nsw':2"
+    counts_jobs: 342
+63:
+    id: 63
+    postcode: 
+    suburb: Bairnsdale
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &92 2017-07-14 08:49:05.354436000 Z
+      zone: *2
+      time: *92
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &93 2019-07-13 10:45:12.195785000 Z
+      zone: *2
+      time: *93
+    parent_id: 
+    fts: "'bairnsdal':1 'vic':2"
+    counts_jobs: 237
+59:
+    id: 59
+    postcode: 
+    suburb: Devonport
+    state: TAS
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &94 2017-07-14 08:49:05.334144000 Z
+      zone: *2
+      time: *94
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &95 2019-07-12 16:45:14.980816000 Z
+      zone: *2
+      time: *95
+    parent_id: 
+    fts: "'devonport':1 'tas':2"
+    counts_jobs: 164
+54:
+    id: 54
+    postcode: 
+    suburb: Port Lincoln
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &96 2017-07-14 08:49:05.308963000 Z
+      zone: *2
+      time: *96
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &97 2019-07-12 16:45:14.984612000 Z
+      zone: *2
+      time: *97
+    parent_id: 
+    fts: "'lincoln':2 'port':1 'sa':3"
+    counts_jobs: 76
+15:
+    id: 15
+    postcode: 
+    suburb: Orange
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &98 2017-07-14 08:49:05.109531000 Z
+      zone: *2
+      time: *98
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &99 2019-07-13 08:45:09.717139000 Z
+      zone: *2
+      time: *99
+    parent_id: 
+    fts: "'nsw':2 'orang':1"
+    counts_jobs: 506
+68:
+    id: 68
+    postcode: 
+    suburb: Frankston
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &100 2017-07-14 08:49:05.380353000 Z
+      zone: *2
+      time: *100
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &101 2019-07-13 12:45:09.933018000 Z
+      zone: *2
+      time: *101
+    parent_id: 
+    fts: "'frankston':1 'vic':2"
+    counts_jobs: 15755
+56:
+    id: 56
+    postcode: 
+    suburb: Whyalla
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &102 2017-07-14 08:49:05.318851000 Z
+      zone: *2
+      time: *102
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &103 2019-07-12 16:45:08.658678000 Z
+      zone: *2
+      time: *103
+    parent_id: 
+    fts: "'sa':2 'whyalla':1"
+    counts_jobs: 133
+32:
+    id: 32
+    postcode: 
+    suburb: Gympie
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &104 2017-07-14 08:49:05.199000000 Z
+      zone: *2
+      time: *104
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &105 2019-07-13 02:45:06.636282000 Z
+      zone: *2
+      time: *105
+    parent_id: 
+    fts: "'gympi':1 'qld':2"
+    counts_jobs: 147
+17:
+    id: 17
+    postcode: 
+    suburb: Penrith
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &106 2017-07-14 08:49:05.120486000 Z
+      zone: *2
+      time: *106
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &107 2019-07-13 12:45:11.097217000 Z
+      zone: *2
+      time: *107
+    parent_id: 
+    fts: "'nsw':2 'penrith':1"
+    counts_jobs: 17938
+77:
+    id: 77
+    postcode: 
+    suburb: Swan Hill
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &108 2017-07-14 08:49:05.426129000 Z
+      zone: *2
+      time: *108
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &109 2019-07-13 07:45:06.948589000 Z
+      zone: *2
+      time: *109
+    parent_id: 
+    fts: "'hill':2 'swan':1 'vic':3"
+    counts_jobs: 53
+13:
+    id: 13
+    postcode: 
+    suburb: Liverpool
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &110 2017-07-14 08:49:05.098495000 Z
+      zone: *2
+      time: *110
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &111 2019-07-13 12:45:13.399536000 Z
+      zone: *2
+      time: *111
+    parent_id: 
+    fts: "'liverpool':1 'nsw':2"
+    counts_jobs: 18211
+79:
+    id: 79
+    postcode: 
+    suburb: Warrnambool
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &112 2017-07-14 08:49:05.436674000 Z
+      zone: *2
+      time: *112
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &113 2019-07-13 09:45:09.512959000 Z
+      zone: *2
+      time: *113
+    parent_id: 
+    fts: "'vic':2 'warrnambool':1"
+    counts_jobs: 138
+29:
+    id: 29
+    postcode: 
+    suburb: Caloundra
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &114 2017-07-14 08:49:05.182322000 Z
+      zone: *2
+      time: *114
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &115 2019-07-13 12:45:13.461220000 Z
+      zone: *2
+      time: *115
+    parent_id: 
+    fts: "'caloundra':1 'qld':2"
+    counts_jobs: 1188
+2:
+    id: 2
+    postcode: 
+    suburb: Albury
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &116 2017-07-14 08:49:05.038958000 Z
+      zone: *2
+      time: *116
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &117 2019-07-13 02:45:12.395244000 Z
+      zone: *2
+      time: *117
+    parent_id: 
+    fts: "'alburi':1 'nsw':2"
+    counts_jobs: 434
+93:
+    id: 93
+    postcode: 
+    suburb: Port Macquarie
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &118 2017-11-23 10:23:12.003648000 Z
+      zone: *2
+      time: *118
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &119 2019-07-13 10:45:13.008544000 Z
+      zone: *2
+      time: *119
+    parent_id: 
+    fts: "'macquari':2 'nsw':3 'port':1"
+    counts_jobs: 296
+58:
+    id: 58
+    postcode: 
+    suburb: Burnie
+    state: TAS
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &120 2017-07-14 08:49:05.329188000 Z
+      zone: *2
+      time: *120
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &121 2019-07-12 16:45:17.155123000 Z
+      zone: *2
+      time: *121
+    parent_id: 
+    fts: "'burni':1 'tas':2"
+    counts_jobs: 151
+97:
+    id: 97
+    postcode: 
+    suburb: Newman
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &122 2019-07-01 11:10:51.736666000 Z
+      zone: *2
+      time: *122
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &123 2019-07-12 14:45:10.505439000 Z
+      zone: *2
+      time: *123
+    parent_id: 
+    fts: "'newman':1 'sa':2"
+    counts_jobs: 55
+104:
+    id: 104
+    postcode: 
+    suburb: Singleton
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &124 2019-07-01 11:35:36.015287000 Z
+      zone: *2
+      time: *124
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &125 2019-07-13 06:45:13.062602000 Z
+      zone: *2
+      time: *125
+    parent_id: 
+    fts: "'nsw':2 'singleton':1"
+    counts_jobs: 504
+60:
+    id: 60
+    postcode: 
+    suburb: Launceston
+    state: TAS
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &126 2017-07-14 08:49:05.339181000 Z
+      zone: *2
+      time: *126
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &127 2019-07-13 08:45:18.060774000 Z
+      zone: *2
+      time: *127
+    parent_id: 
+    fts: "'launceston':1 'tas':2"
+    counts_jobs: 261
+31:
+    id: 31
+    postcode: 
+    suburb: Gold Coast
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &128 2017-07-14 08:49:05.193126000 Z
+      zone: *2
+      time: *128
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &129 2019-07-13 09:45:18.049571000 Z
+      zone: *2
+      time: *129
+    parent_id: 
+    fts: "'coast':2 'gold':1 'qld':3"
+    counts_jobs: 2311
+44:
+    id: 44
+    postcode: 
+    suburb: Redcliffe City
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &130 2017-07-14 08:49:05.258469000 Z
+      zone: *2
+      time: *130
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &131 2019-07-13 10:45:17.515167000 Z
+      zone: *2
+      time: *131
+    parent_id: 
+    fts: "'citi':2 'qld':3 'redcliff':1"
+    counts_jobs: 6710
+51:
+    id: 51
+    postcode: 
+    suburb: Port Adelaide
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &132 2017-07-14 08:49:05.293428000 Z
+      zone: *2
+      time: *132
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &133 2019-07-13 09:45:18.601215000 Z
+      zone: *2
+      time: *133
+    parent_id: 
+    fts: "'adelaid':2 'port':1 'sa':3"
+    counts_jobs: 4673
+78:
+    id: 78
+    postcode: 
+    suburb: Wangaratta
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &134 2017-07-14 08:49:05.431625000 Z
+      zone: *2
+      time: *134
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &135 2019-07-13 07:45:17.978863000 Z
+      zone: *2
+      time: *135
+    parent_id: 
+    fts: "'vic':2 'wangaratta':1"
+    counts_jobs: 159
+98:
+    id: 98
+    postcode: 
+    suburb: Roxby Downs
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &136 2019-07-01 11:18:32.719436000 Z
+      zone: *2
+      time: *136
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &137 2019-07-12 14:45:10.894257000 Z
+      zone: *2
+      time: *137
+    parent_id: 
+    fts: "'down':2 'roxbi':1 'sa':3"
+    counts_jobs: 56
+50:
+    id: 50
+    postcode: 
+    suburb: Murray Bridge
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &138 2017-07-14 08:49:05.288415000 Z
+      zone: *2
+      time: *138
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &139 2019-07-12 16:45:17.720685000 Z
+      zone: *2
+      time: *139
+    parent_id: 
+    fts: "'bridg':2 'murray':1 'sa':3"
+    counts_jobs: 138
+96:
+    id: 96
+    postcode: 
+    suburb: Tom Price
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &140 2019-07-01 11:09:47.363186000 Z
+      zone: *2
+      time: *140
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &141 2019-07-12 09:45:15.616026000 Z
+      zone: *2
+      time: *141
+    parent_id: 
+    fts: "'price':2 'tom':1 'wa':3"
+    counts_jobs: 33
+100:
+    id: 100
+    postcode: 
+    suburb: Emerald
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &142 2019-07-01 11:23:28.477697000 Z
+      zone: *2
+      time: *142
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &143 2019-07-13 12:45:17.017298000 Z
+      zone: *2
+      time: *143
+    parent_id: 
+    fts: "'emerald':1 'qld':2"
+    counts_jobs: 12331
+28:
+    id: 28
+    postcode: 
+    suburb: Cairns
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &144 2017-07-14 08:49:05.177388000 Z
+      zone: *2
+      time: *144
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &145 2019-07-13 09:45:19.365121000 Z
+      zone: *2
+      time: *145
+    parent_id: 
+    fts: "'cairn':1 'qld':2"
+    counts_jobs: 838
+41:
+    id: 41
+    postcode: 
+    suburb: Toowoomba
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &146 2017-07-14 08:49:05.243500000 Z
+      zone: *2
+      time: *146
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &147 2019-07-13 12:45:17.185379000 Z
+      zone: *2
+      time: *147
+    parent_id: 
+    fts: "'qld':2 'toowoomba':1"
+    counts_jobs: 641
+45:
+    id: 45
+    postcode: 
+    suburb: Redland City
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &148 2017-07-14 08:49:05.263899000 Z
+      zone: *2
+      time: *148
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &149 2019-07-13 12:45:18.139376000 Z
+      zone: *2
+      time: *149
+    parent_id: 
+    fts: "'citi':2 'qld':3 'redland':1"
+    counts_jobs: 10825
+47:
+    id: 47
+    postcode: 
+    suburb: Adelaide
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &150 2017-07-14 08:49:05.273654000 Z
+      zone: *2
+      time: *150
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &151 2019-07-13 09:45:19.809670000 Z
+      zone: *2
+      time: *151
+    parent_id: 
+    fts: "'adelaid':1 'qld':2"
+    counts_jobs: 4679
+73:
+    id: 73
+    postcode: 
+    suburb: Melton
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &152 2017-07-14 08:49:05.405650000 Z
+      zone: *2
+      time: *152
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &153 2019-07-13 12:45:18.897288000 Z
+      zone: *2
+      time: *153
+    parent_id: 
+    fts: "'melton':1 'vic':2"
+    counts_jobs: 15335
+92:
+    id: 92
+    postcode: 
+    suburb: Kensington
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &154 2017-11-06 11:25:43.921000000 Z
+      zone: *2
+      time: *154
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &155 2019-07-13 12:45:19.460097000 Z
+      zone: *2
+      time: *155
+    parent_id: 
+    fts: "'kensington':1 'nsw':2"
+    counts_jobs: 18252
+88:
+    id: 88
+    postcode: 
+    suburb: Mandurah
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &156 2017-07-14 08:49:05.492442000 Z
+      zone: *2
+      time: *156
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &157 2019-07-13 09:45:20.053929000 Z
+      zone: *2
+      time: *157
+    parent_id: 
+    fts: "'mandurah':1 'wa':2"
+    counts_jobs: 699
+95:
+    id: 95
+    postcode: 
+    suburb: Port Hedland
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &158 2019-05-30 11:44:23.902760000 Z
+      zone: *2
+      time: *158
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &159 2019-07-13 04:45:13.870611000 Z
+      zone: *2
+      time: *159
+    parent_id: 
+    fts: "'hedland':2 'port':1 'wa':3"
+    counts_jobs: 212
+7:
+    id: 7
+    postcode: 
+    suburb: Campbelltown
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &160 2017-07-14 08:49:05.066226000 Z
+      zone: *2
+      time: *160
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &161 2019-07-13 12:45:20.334188000 Z
+      zone: *2
+      time: *161
+    parent_id: 
+    fts: "'campbelltown':1 'nsw':2"
+    counts_jobs: 18095
+105:
+    id: 105
+    postcode: 
+    suburb: Nowra
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &162 2019-07-08 00:30:17.569127000 Z
+      zone: *2
+      time: *162
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &163 2019-07-13 06:45:15.309038000 Z
+      zone: *2
+      time: *163
+    parent_id: 
+    fts: "'nowra':1 'nsw':2"
+    counts_jobs: 241
+90:
+    id: 90
+    postcode: 
+    suburb: Rockingham
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &164 2017-07-14 08:49:05.503504000 Z
+      zone: *2
+      time: *164
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &165 2019-07-13 12:45:20.830511000 Z
+      zone: *2
+      time: *165
+    parent_id: 
+    fts: "'rockingham':1 'wa':2"
+    counts_jobs: 7196
+57:
+    id: 57
+    postcode: 
+    suburb: Hobart
+    state: TAS
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &166 2017-07-14 08:49:05.324065000 Z
+      zone: *2
+      time: *166
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &167 2019-07-13 09:45:15.793102000 Z
+      zone: *2
+      time: *167
+    parent_id: 
+    fts: "'hobart':1 'tas':2"
+    counts_jobs: 823
+102:
+    id: 102
+    postcode: 
+    suburb: Coffs Harbour
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &168 2019-07-01 11:32:08.023069000 Z
+      zone: *2
+      time: *168
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &169 2019-07-13 09:45:15.809032000 Z
+      zone: *2
+      time: *169
+    parent_id: 
+    fts: "'coff':1 'harbour':2 'nsw':3"
+    counts_jobs: 243
+34:
+    id: 34
+    postcode: 
+    suburb: Ipswich
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &170 2017-07-14 08:49:05.209133000 Z
+      zone: *2
+      time: *170
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &171 2019-07-13 10:45:15.012421000 Z
+      zone: *2
+      time: *171
+    parent_id: 
+    fts: "'ipswich':1 'qld':2"
+    counts_jobs: 10151
+67:
+    id: 67
+    postcode: 
+    suburb: Dandenong
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &172 2017-07-14 08:49:05.374736000 Z
+      zone: *2
+      time: *172
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &173 2019-07-13 12:45:21.341336000 Z
+      zone: *2
+      time: *173
+    parent_id: 
+    fts: "'dandenong':1 'vic':2"
+    counts_jobs: 15944
+49:
+    id: 49
+    postcode: 
+    suburb: Mount Gambier
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &174 2017-07-14 08:49:05.283618000 Z
+      zone: *2
+      time: *174
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &175 2019-07-13 06:45:12.855996000 Z
+      zone: *2
+      time: *175
+    parent_id: 
+    fts: "'gambier':2 'mount':1 'sa':3"
+    counts_jobs: 111
+70:
+    id: 70
+    postcode: 
+    suburb: Hamilton
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &176 2017-07-14 08:49:05.390691000 Z
+      zone: *2
+      time: *176
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &177 2019-07-13 12:45:21.381534000 Z
+      zone: *2
+      time: *177
+    parent_id: 
+    fts: "'hamilton':1 'vic':2"
+    counts_jobs: 2011
+101:
+    id: 101
+    postcode: 
+    suburb: Biloela
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &178 2019-07-01 11:27:42.232397000 Z
+      zone: *2
+      time: *178
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &179 2019-07-12 07:45:12.764142000 Z
+      zone: *2
+      time: *179
+    parent_id: 
+    fts: "'biloela':1 'qld':2"
+    counts_jobs: 26
+86:
+    id: 86
+    postcode: 
+    suburb: Joondalup
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &180 2017-07-14 08:49:05.480454000 Z
+      zone: *2
+      time: *180
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &181 2019-07-13 12:45:21.507652000 Z
+      zone: *2
+      time: *181
+    parent_id: 
+    fts: "'joondalup':1 'wa':2"
+    counts_jobs: 7240
+65:
+    id: 65
+    postcode: 
+    suburb: Ballarat
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &182 2017-07-14 08:49:05.364314000 Z
+      zone: *2
+      time: *182
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &183 2019-07-13 09:45:16.291035000 Z
+      zone: *2
+      time: *183
+    parent_id: 
+    fts: "'ballarat':1 'vic':2"
+    counts_jobs: 547
+91:
+    id: 91
+    postcode: 
+    suburb: Wodonga
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &184 2017-07-14 08:49:05.509910000 Z
+      zone: *2
+      time: *184
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &185 2019-07-13 02:45:14.051993000 Z
+      zone: *2
+      time: *185
+    parent_id: 
+    fts: "'vic':2 'wodonga':1"
+    counts_jobs: 431
+46:
+    id: 46
+    postcode: 
+    suburb: Thuringowa
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &186 2017-07-14 08:49:05.268763000 Z
+      zone: *2
+      time: *186
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &187 2019-07-13 09:45:16.517254000 Z
+      zone: *2
+      time: *187
+    parent_id: 
+    fts: "'qld':2 'thuringowa':1"
+    counts_jobs: 701
+99:
+    id: 99
+    postcode: 
+    suburb: Bowen
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &188 2019-07-01 11:21:46.577899000 Z
+      zone: *2
+      time: *188
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &189 2019-07-12 14:45:09.928413000 Z
+      zone: *2
+      time: *189
+    parent_id: 
+    fts: "'bowen':1 'qld':2"
+    counts_jobs: 23
+75:
+    id: 75
+    postcode: 
+    suburb: Sale
+    state: VIC
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &190 2017-07-14 08:49:05.415278000 Z
+      zone: *2
+      time: *190
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &191 2019-07-13 05:45:16.986364000 Z
+      zone: *2
+      time: *191
+    parent_id: 
+    fts: "'sale':1 'vic':2"
+    counts_jobs: 332
+55:
+    id: 55
+    postcode: 
+    suburb: Victor Harbor
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &192 2017-07-14 08:49:05.313789000 Z
+      zone: *2
+      time: *192
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &193 2019-07-13 06:45:14.446636000 Z
+      zone: *2
+      time: *193
+    parent_id: 
+    fts: "'harbor':2 'sa':3 'victor':1"
+    counts_jobs: 167
+18:
+    id: 18
+    postcode: 
+    suburb: Queanbeyan
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &194 2017-07-14 08:49:05.125381000 Z
+      zone: *2
+      time: *194
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &195 2019-07-13 10:45:15.728142000 Z
+      zone: *2
+      time: *195
+    parent_id: 
+    fts: "'nsw':2 'queanbeyan':1"
+    counts_jobs: 4163
+52:
+    id: 52
+    postcode: 
+    suburb: Port Augusta
+    state: SA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &196 2017-07-14 08:49:05.298696000 Z
+      zone: *2
+      time: *196
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &197 2019-07-12 16:45:16.496610000 Z
+      zone: *2
+      time: *197
+    parent_id: 
+    fts: "'augusta':2 'port':1 'sa':3"
+    counts_jobs: 90
+103:
+    id: 103
+    postcode: 
+    suburb: Gunnedah
+    state: NSW
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &198 2019-07-01 11:33:10.677285000 Z
+      zone: *2
+      time: *198
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &199 2019-07-12 23:45:17.059572000 Z
+      zone: *2
+      time: *199
+    parent_id: 
+    fts: "'gunnedah':1 'nsw':2"
+    counts_jobs: 64
+80:
+    id: 80
+    postcode: 
+    suburb: Perth
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &200 2017-07-14 08:49:05.441723000 Z
+      zone: *2
+      time: *200
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &201 2019-07-13 10:45:16.095637000 Z
+      zone: *2
+      time: *201
+    parent_id: 
+    fts: "'perth':1 'wa':2"
+    counts_jobs: 7392
+83:
+    id: 83
+    postcode: 
+    suburb: Busselton
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &202 2017-07-14 08:49:05.456764000 Z
+      zone: *2
+      time: *202
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &203 2019-07-13 10:45:16.352626000 Z
+      zone: *2
+      time: *203
+    parent_id: 
+    fts: "'busselton':1 'wa':2"
+    counts_jobs: 272
+25:
+    id: 25
+    postcode: 
+    suburb: Brisbane
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &204 2017-07-14 08:49:05.160608000 Z
+      zone: *2
+      time: *204
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &205 2019-07-13 10:45:16.670220000 Z
+      zone: *2
+      time: *205
+    parent_id: 
+    fts: "'brisban':1 'qld':2"
+    counts_jobs: 10353
+82:
+    id: 82
+    postcode: 
+    suburb: Bunbury
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &206 2017-07-14 08:49:05.451896000 Z
+      zone: *2
+      time: *206
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &207 2019-07-13 10:45:16.712929000 Z
+      zone: *2
+      time: *207
+    parent_id: 
+    fts: "'bunburi':1 'wa':2"
+    counts_jobs: 297
+26:
+    id: 26
+    postcode: 
+    suburb: Bundaberg
+    state: QLD
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &208 2017-07-14 08:49:05.165621000 Z
+      zone: *2
+      time: *208
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &209 2019-07-13 00:45:19.415965000 Z
+      zone: *2
+      time: *209
+    parent_id: 
+    fts: "'bundaberg':1 'qld':2"
+    counts_jobs: 333
+84:
+    id: 84
+    postcode: 
+    suburb: Fremantle
+    state: WA
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &210 2017-07-14 08:49:05.469754000 Z
+      zone: *2
+      time: *210
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &211 2019-07-13 10:45:17.118938000 Z
+      zone: *2
+      time: *211
+    parent_id: 
+    fts: "'fremantl':1 'wa':2"
+    counts_jobs: 7343

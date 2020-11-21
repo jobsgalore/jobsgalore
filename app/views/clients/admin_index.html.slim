@@ -1,0 +1,38 @@
+.container
+  .col-md-6.col-lg-6
+    h1 Listing clients
+  .col-md-6.col-lg-6
+    = link_to 'New Client', admin_client_new_path, class:"btn btn-primary btn-block "
+  p
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th ID
+        th Firstname
+        th Lastname
+        th Email
+        th Type
+        th Location
+        th Send email
+        th
+        th
+        th
+
+    tbody
+      - @clients.each do |client|
+        tr
+          td = client.id
+          td = client.firstname
+          td = client.lastname
+          td = client.email
+          td = client.character
+          td = "#{client.location.suburb}, #{client.location.state}"
+          td = client.send_email
+          td = link_to 'Show', admin_client_show_path(client), class: "btn btn-primary btn-block "
+          td = link_to 'Edit', admin_client_edit_path(client), class: "btn btn-success btn-block "
+          td = link_to 'Destroy', admin_client_destroy_path(client), data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger btn-block "
+
+  br
+
+  = will_paginate_mini @clients
+

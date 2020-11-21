@@ -1,0 +1,7 @@
+<%if @job.urgent.blank?%>
+
+Urgent $<%=Services::URGENT.price_integer%> (7 day)
+
+In a hurry? Add an Urgent tag to your job opportunity. It's a great way to attract serious offers quickly.
+<%=     bill_url(bill: {id: @job.id, type: 2, option: 1}) + "&" + @utm%>
+<% end %>

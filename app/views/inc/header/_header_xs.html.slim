@@ -1,0 +1,96 @@
+input[type="checkbox" id="nav-toggle" hidden]
+//nav.navmenu.navbar-blue.navmenu-fixed-left.offcanvas.nav-min
+nav.navbar.navbar-blue.navbar-top[itemscope itemtype="http://schema.org/WebSite"]
+  = render 'inc/header/inc/google_addon'
+  .container-fluid
+    label.navbar-toggle.navbar-left[for="nav-toggle" onclick]
+      span.sr-only
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    = head_menu(search)
+.navmenu.nav_menu.navbar-blue
+  label.nav-toggle[for="nav-toggle" onclick]
+  h2.logo
+    a[href="https://jobsgalore.eu"]
+      |JobsGalore.eu
+  ul
+    - if client_signed_in?
+      .text-center
+        = image_bg(current_client.photo_url, "contain", "50px", "50px")
+      .text-center
+        | &nbsp; #{current_client.full_name} &nbsp;
+      - if current_client.resp?
+        li
+          = link_to jobs_root_path do
+            | &nbsp;
+            span.glyphicon.glyphicon-plus
+            | &nbsp; My jobs
+      li
+        = link_to resumes_root_path do
+          | &nbsp;
+          span.glyphicon.glyphicon-user
+          | &nbsp; My resumes
+      li
+        = link_to settings_path do
+          | &nbsp;
+          span.glyphicon.glyphicon-cog
+          | &nbsp; Settings
+      li
+        = link_to contacts_of_companies_path do
+          | &nbsp;
+          span.glyphicon.glyphicon-envelope
+          | &nbsp; Mailbox
+      - if current_client.employer?
+        li
+          = link_to settings_company_path do
+            | &nbsp;
+            span.glyphicon.glyphicon-cd
+            | &nbsp; Company
+      - if current_client.admin?
+        li
+          = link_to admin_path do
+            span.glyphicon.glyphicon-eye-open
+            | &nbsp; Administration of site
+    li
+      = link_to new_job_path do
+        |&nbsp;
+        span.glyphicon.glyphicon-briefcase
+        |&nbsp; Post a job ad for free
+    li
+      = link_to new_resume_path do
+        |&nbsp;
+        span.glyphicon.glyphicon-paperclip
+        |&nbsp; Upload your resume
+    li
+      = link_to contacts_of_companies_path, onclick: "experiment('contacts_of_companies', 'Вход');" do
+        |&nbsp;
+        span.glyphicon.glyphicon-envelope
+        |&nbsp; Send a message to employers
+    - unless client_signed_in?
+      li
+        = link_to new_client_session_path do
+          |&nbsp;
+          span.glyphicon.glyphicon-log-in
+          |&nbsp; Log in
+      li
+        = link_to new_client_registration_path do
+          |&nbsp;
+          span.glyphicon.glyphicon-registration-mark
+          |&nbsp; Sign up
+    - else
+      li
+        = link_to destroy_client_session_path, :method => :delete do
+          | &nbsp;
+          span.glyphicon.glyphicon-log-out
+          | &nbsp; Log out
+  ul[style="position:relative; bottom:-40px; width: 100%" ]
+    li
+      = link_to 'Terms and Conditions', terms_and_conditions_path
+    li
+      = link_to 'Privacy policy', privacy_path
+    li
+      = link_to 'Contact us', contact_path
+    li
+      = link_to 'About us', about_path
+

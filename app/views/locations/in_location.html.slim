@@ -1,0 +1,26 @@
+- meta_head(  title:"#{@in_location.name}",
+        description: "Explore #{@in_location.suburb} jobs and career resources. Find all the information you need to land a job in Melbourne and build a career.",
+        keywords: "#{@in_location.key}")
+.container
+  .col-lg-8.col-md-8.col-sm-8
+    h1.text-center ="#{@in_location.name}"
+  .col-lg-12.col-md-12.col-sm-12
+    .row
+      .col-lg-8.col-md-8.col-sm-8
+        = render('ad/before_search_ss', query: nil, location: @in_location.name, page: @in_location.page) if Propert.ads_turn_on?
+        - if @in_location.type == Objects::JOBS
+          = render partial: 'inc/job', collection: @in_location.objs, as: :job, locals: {query: ''}
+        - elsif @in_location.type==Objects::COMPANIES
+          = render partial:'inc/company', collection: @in_location.objs, locals:{query:''}
+        - elsif @in_location.type==Objects::RESUMES
+          = render partial:'inc/resume', collection: @in_location.objs, locals:{query:''}
+        .text-center
+          = will_paginate_mini @in_location.objs
+        = render('ad/after_search', query: nil, location: @in_location.name, page: @in_location.page) if Propert.ads_turn_on?
+      .col-lg-4.col-md-4.col-sm-4.hidden-xs
+        = render 'ad/rtb_block', code: 'after_summary_skyscraper_md' if Propert.ads_turn_on?
+  .row
+  - if @in_location.type == Objects::JOBS
+    =render 'inc/btn/btn_new_resume_xs_sm'
+  - if @in_location.type==Objects::RESUMES
+    =render 'inc/btn/btn_new_job_xs_sm'

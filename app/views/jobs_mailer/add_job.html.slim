@@ -1,0 +1,25 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Your job opportunity was successfully posted on Jobs Galore!
+div[style=body_email]
+  |You have successfully posted your job opportunity #{link_to @job.title, job_url(@job.id) + "?"+@utm, target: "_blank"} on Jobs Galore.
+  div[style=button_email]
+    = link_to 'Show', job_url(@job.id) + "?"+@utm, style: link_email, target: "_blank"
+  =space_email
+  =space_email
+hr
+div[style=title_email]
+  div[style=h1_email]
+    |Find the best applicants quickly:
+div[style=body_email]
+  strong
+    |Urgent
+  = space_email
+  |In a hurry? Add an Urgent tag to your job opportunity. It's a great way to attract serious offers quickly.
+  =space_email
+  strong
+    |Highlight
+  = space_email
+  |A highlighted job opportunity stands out from the other ads on the search and browse results due to the orange background colour. A highlighted job opportunity has greater visibility and therefore receive more visits and replies than other Ads.
+  div[style=button_email]
+    = link_to 'Find quickly', new_order_url(@job, :job),style: link_email, target: "_blank"

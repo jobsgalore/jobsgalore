@@ -1,0 +1,10 @@
+The job opportunity <%=@job.title%>(<%=job_url(@job) + "&" + @utm%>) in <%=@job.location.name%>.
+
+The option <%=@option%> has successfully activated.
+
+<% if @job.highlight.blank? or @job.urgent.blank? %>
+You can also activate:
+===================================================
+<%=render 'jobs_mailer/party_of_email/highlight.text.erb'%>
+<%=render 'jobs_mailer/party_of_email/urgent.text.erb'%>
+<%end %>

@@ -1,0 +1,66 @@
+.col-xs-7.col-xs-offset-5.hidden-lg.hidden-md.hidden-sm
+  .btn-group.btn-group-justified
+    .btn-group
+      span.btn.btn-warning.btn-block[data-toggle="dropdown"]
+        span.glyphicon.glyphicon-cog
+        span.caret
+      ul.dropdown-menu
+        - if PropertsHelper::URGENT=="true"
+          li
+            = link_to "Urgent $#{Services::URGENT.price_integer} (7 day)", bill_path(bill: {id: job.id, kind: 2, option: 1})
+        - if PropertsHelper::TOP == "true"
+          li
+            = link_to "Top $20 (7 day)", bill_path(bill: {id: job.id, kind: 2, option: 2})
+        - if PropertsHelper::HIGHLIGHT == "true"
+          li
+            = link_to "Highlight $#{Services::HIGHLIGHT.price_integer} (7 day)", bill_path(bill: {id: job.id, kind: 2, option: 3})
+    .btn-group
+      = link_to edit_job_path(job), class: "btn btn-success btn-block" do
+        span.glyphicon.glyphicon-pencil
+    .btn-group
+      = link_to job, data: {confirm: 'Are you sure?'}, method: :delete, class: "btn btn-danger btn-block " do
+        span.glyphicon.glyphicon-trash
+  p
+.col-lg-9.col-md-9.col-sm-8
+  h3
+    = link_to job.title.capitalize, job, class: 'text-warning'
+  - if job.salarymax.nil? and not job.salarymin.nil? then
+    p
+      strong
+        |Solary: &nbsp;
+      = job.salarymin.to_i.to_s
+  - elsif not (job.salarymax.nil? and job.salarymin.nil?)
+    p
+      strong
+        |Solary: &nbsp;
+      = job.salarymin.to_i.to_s+" - "+ job.salarymax.to_i.to_s
+  p.small
+    strong
+      |Location: &nbsp;
+    |#{job.location.state.to_s+" "+job.location.suburb.capitalize.to_s}, &nbsp;
+    strong
+      |Posted: &nbsp;
+    |#{job.updated_at.strftime("%d %B %Y").to_s}
+.col-lg-3.col-md-3.col-sm-4.hidden-xs
+  .row
+    .col-sm-12.col-lg-12.col-md-12
+      button.btn.btn-warning.btn-block[data-toggle="dropdown"]
+        |Extras &nbsp;
+        span.caret
+      ul.dropdown-menu
+        - if PropertsHelper::URGENT=="true"
+          li
+            = link_to "Urgent $#{Services::URGENT.price_integer} (7 day)", bill_path(bill: {id: job.id, kind: 2, option: 1})
+        - if PropertsHelper::TOP == "true"
+          li
+            = link_to "Top $20 (7 day)", bill_path(bill: {id: job.id, kind: 2, option: 2})
+        - if PropertsHelper::HIGHLIGHT == "true"
+          li
+            = link_to "Highlight $#{Services::HIGHLIGHT.price_integer} (7 day)", bill_path(bill: {id: job.id, kind: 2, option: 3})
+      p
+    .col-sm-12.col-lg-12.col-md-12
+      = link_to "Edit", edit_job_path(job), class: "btn btn-success btn-block"
+      p
+    .col-sm-12.col-lg-12.col-md-12
+      = link_to "Delete", job, data: {confirm: 'Are you sure?'}, method: :delete, class: "btn btn-danger btn-block"
+      p

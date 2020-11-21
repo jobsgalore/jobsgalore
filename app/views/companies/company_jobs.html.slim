@@ -1,0 +1,21 @@
+- meta_head(  title:"Jobs at #{@company.name}",
+        description: "Jobs at #{@company.name}",
+        keywords: @objs.blank? ? @company.keywords: @objs.pluck(:title).join(', '),
+        url: jobs_at_company_path(@company),
+        image: @company.logo_url)
+.container
+  .row
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+      h1 Jobs at #{@company.name}
+      .col-lg-4.col-md-4.col-sm-4.hidden-xs
+        .panel.panel-default
+          .panel-body.text-center
+            = link_to @company.name, @company
+            = image_bg(@company.logo_url, "contain", "200px", "200px")
+        = render 'ad/rtb_block', code: "after_logo_md" if Propert.ads_turn_on?
+      .col-sm-8.col-md-8.col-sm-8.col-xs-12
+        = render partial: 'inc/job', collection: @objs, as: :job, locals:{query: ''}
+        .text-center
+        = will_paginate_mini @objs
+        .row
+        = render 'inc/btn/btn_new_resume_xs_sm'

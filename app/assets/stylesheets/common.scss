@@ -1,0 +1,237 @@
+
+mark{
+  padding: 0;
+}
+
+trix-editor {
+  height: 300px !important;
+  max-height: 500px !important;
+  overflow-y: auto !important;
+}
+
+body {
+  font-display: fallback;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+.modal {
+  top: 8%;
+}
+
+
+.glyphicon-small {
+  font-size: 12px;
+}
+
+$size: 32px;
+
+.text-center {
+  .social-share-button {
+    .ssb-icon {
+      background-size: $size $size;
+      height: $size;
+      width: $size;
+    }
+  }
+}
+
+.social-share-button {
+  .ssb-icon-min {
+    background-size: 18px 18px;
+    height: 18px;
+    width: 18px;
+  }
+}
+
+
+.main_image{
+  background-image: image-url('jobsA.png');
+  display: inline-block;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: auto;
+  height: 350px;  /* Высота шапки */
+}
+
+.avatar{
+  //display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.navbar-toggle.navbar-left {
+  float: left;
+  margin-left: 10px;
+}
+
+.border_top{
+  border-top: 1px solid #e3e3e9;
+}
+
+.highlight{
+  background-color: #ffffcc;
+}
+.urgent{
+  background-image: image-url("urgent.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+@media screen {
+  .print_header {
+    display: none;
+  }
+}
+
+
+.none {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.editable {
+  border: 1px groove silver;
+  border-radius: 5px;
+  min-height: 100px;
+  color: #4c4c4c;
+}
+
+.editable:focus {
+  border-color: rgba(33, 71, 239, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(40, 181, 239, 0.6);
+  outline: 0 none;
+}
+
+.btn_margin {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.badge {
+  padding: 1px 9px 2px;
+  font-size: 14.025px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #999999;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.badge-error {
+  background-color: #b94a48;
+}
+
+.badge-error:hover {
+  background-color: #953b39;
+}
+
+a{
+  word-wrap: break-word;
+}
+
+.word_wrap{
+  word-wrap: break-word;
+}
+
+.line {
+  /* чтобы линии не выходили за ширину блока заголовка */
+  overflow: hidden;
+}
+.line:before,
+.line:after {
+  content: '';
+
+  /* делаем линию строчно-блочной */
+  display: inline-block;
+
+  /* выравниваем вертикально по середине */
+  vertical-align: middle;
+
+  /* не позволяем ширине превысить 100% (будет добавлен бордюр) */
+  box-sizing: border-box;
+
+  /* установка ширины в 100% делает линию равной ширине тега заголовка
+  ** благодаря этому линия заполнит все свободное пространство
+  ** слева и справа от текста
+  */
+  width: 100%;
+  height: 1px;
+  background: rgba(115, 115, 115, 0.99);
+
+  /* добавляем к линии левый и правый бордюр цветом основного фона заголовка
+  ** благодаря этому создается нужный отступ между линиями и текстом
+  */
+  border: solid #FFF;
+  border-width: 0 10px;
+}
+.line:before {
+  /* смещаем левую линию влево отрицательным отступом, равным 100% ширины
+  ** благодаря этому линия встает слева от текста
+  */
+  margin-left: -100%;
+}
+.line:after {
+  /* смещаем правую линию вправо отрицательным отступом, равным 100% ширины
+  ** благодаря этому линия встает справа от текста
+  */
+  margin-right: -100%;
+}
+
+.adaptive{
+  display: block;
+  margin: 10px auto;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

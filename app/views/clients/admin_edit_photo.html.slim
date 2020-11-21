@@ -1,0 +1,28 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-6.col-lg-6.col-md-offset-3.col-lg-offset-3
+      h2 Update photo
+      =form_for @client, html:{enctype: "multipart/form-data"} do |f|
+        - if @client.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@client.errors.count, "error")} prohibited this client from being saved:"
+            ul
+              - @client.errors.full_messages.each do |message|
+                li = message
+        hr.colorgraph
+        .form-group.text-center
+          - if @client.photo.nil?
+            = image_tag(image_path("avatar.jpg"), size: "300x300", class: 'img-thumbnail', alt: @client.full_name)
+          - else
+            = image_tag(Dragonfly.app.remote_url_for(@client.photo_uid), size: "300x300", class: 'img-thumbnail', alt: @client.full_name)
+        .form-group
+          = f.label "Photo"
+          br
+          = react_component('Fileinput', id: "client_photo", name: "client[photo]", place_holder: "empty")
+        hr.colorgraph
+        .row
+          .col-xs-6.col-md-6
+            = f.submit "Update", class: "btn btn-primary btn-block"
+          .col-xs-6.col-md-6
+            = link_to "Back", :back, class: "btn btn-success btn-block"
+        br

@@ -1,0 +1,3 @@
+= form_tag('/search', method: :get, class: "navbar-form navbar-left")  do
+  - name ||= "main_search"
+  = react_component("SearchNew", {name: name, key: key , search: search, categories: IndustriesForSearch.new.call})

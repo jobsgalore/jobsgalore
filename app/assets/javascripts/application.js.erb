@@ -1,0 +1,184 @@
+// require turbolinks
+//= require jquery.min.js
+//= require jquery_ujs
+//= require react
+//= require react_ujs
+//= require components
+///= require bootstrap-typeahead
+//= require bootstrap.min
+//= require social_share_button
+//= require trix
+//= require trix_conf
+//= require current
+//= require connect
+//= require email-jobs
+
+
+window.addEventListener("load", function() {
+    elem = document.getElementById("first");
+    if (elem != null){
+        connect.send('VKWebAppInit');
+    }
+});
+//import {default as vk} from './connect.js';
+//require_tree ./controllers
+
+//Без jQuery работает  turbolinks, react, social-share-button, trix
+//Переделать bootstrap-typeahead,
+function experiment(name, variant) {
+   $.post("/experiment",
+        {
+            experiment: {
+                name: name,
+                variant: variant,
+                params: {
+                    browser: navigator.userAgent,
+                    lang: navigator.language,
+                    platform: navigator.platform
+                }
+            }
+        });
+}
+
+/*var stimulus = Stimulus.Application.start()
+var bLazy = new Blazy({
+    //Загрузка маленьких изображений. Возможно в будующем!!!
+    //    breakpoints: [{
+    //     width: 740,
+    //     src: 'data-src-small'
+    // }],
+    success: function(element){
+        setTimeout(function(){
+            // We want to remove the loader gif now.
+            // First we find the parent container
+            // then we remove the "loading" class which holds the loader image
+            var parent = element.parentNode;
+            parent.className = parent.className.replace(/\bloading\b/,'');
+        }, 200);
+    }
+});*/
+
+/*document.addEventListener("turbolinks:before-cache", function() {
+    var bLazy = new Blazy({
+        success: function(element){
+            setTimeout(function(){
+                let parent = element.parentNode;
+                parent.className = parent.className.replace(/\bloading\b/,'');
+            }, 200);
+        }
+    });
+})*/
+
+
+var readURL = function (input) {
+    if (input.files) {
+        let uploadFile = input.files[0];
+        switch(uploadFile.type){
+            case 'text/plain':
+                uploadTXT(uploadFile);
+                break;
+            default:
+                uploadPdfDocx(uploadFile);
+        }
+    }
+};
+
+var uploadPdfDocx = function(uploadFile) {
+    let ed = $("trix-editor")[0];
+    let fd = new FormData;
+    fd.append('file', uploadFile);
+    $.ajax({
+        type: 'POST',
+        url: "<%=Rails.application.routes.url_helpers.file_to_html_path%>",
+        data: fd,
+        success: function( data ) {
+            ed.editor.setSelectedRange([0, 0]);
+            ed.editor.insertHTML(data.description);
+        },
+        contentType: false,
+        processData: false
+    });
+};
+
+var uploadTXT = function(uploadFile) {
+    let ed = $("trix-editor")[0];
+    let reader = new FileReader();
+    reader.onload = function (e) {
+        let html = e.target.result;
+        html = html.replace(new RegExp('<','g'), "&lt;");
+        html = html.replace(new RegExp('>','g'), "&gt;");
+        ed.editor.setSelectedRange([0, 0]);
+        ed.editor.insertHTML(html);
+    };
+    reader.readAsText(uploadFile);
+};
+
+$(document).on('click', '.radio_button_customer', function(e) {
+    $('.radio_button_customer').each(function (i,elem) {
+        if (elem === e.target){
+            $(this).addClass("glyphicon-ok active");
+            $(this).removeClass("glyphicon-unchecked");
+            $(this).children()[0].checked = true;
+        }else{
+            $(this).addClass("glyphicon-unchecked");
+            $(this).removeClass("glyphicon-ok active");
+        }
+    });
+});
+
+/*document.addEventListener("turbolinks:load", function() {
+    var infolinks_pid = 3225129;
+    var infolinks_wsid = 0;
+    if (navigator.userAgent.indexOf('bot')== -1 || navigator.userAgent != '') {
+        let head = document.getElementsByTagName("head")[0];
+        let script = document.createElement("script");
+        script.src = "//resources.infolinks.com/js/infolinks_main.js";
+        script.type = "text/javascript";
+        head.appendChild(script);
+    }
+});*/
+
+/*$(document).on('load', function(e) {
+    alert("sdadadad");
+    $('.radio_button_customer').each(function (i,elem) {
+        if (elem === e.target){
+            $(this).addClass("glyphicon-ok active");
+            $(this).removeClass("glyphicon-unchecked");
+            $(this).children()[0].checked = true;
+        }else{
+            $(this).addClass("glyphicon-unchecked");
+            $(this).removeClass("glyphicon-ok active");
+        }
+    });
+
+});
+*/
+
+//$(function() {
+$(document).on('change', '#inp', function() {
+        experiment('create_resume', 'Заходим из кнопки. Загрузка резюме');
+        readURL(this);
+});
+$(document).on('click', '.linkedin_click', function () {
+        $.get("<%=Rails.application.routes.url_helpers.linkedin_resume_path%>", function(data) {
+            let ed = $("trix-editor")[0];
+            $("[name='resume[title]']").val(data.title);
+            ed.editor.setSelectedRange([0, 0]);
+            ed.editor.insertHTML(data.description);
+            $("[name='resume[industry_id]']").val(data.industry_id);
+        });
+});
+
+$(document).ready(function () {
+    if ($("div[data-react-class='Alert']").length == 0 ) {
+        setTimeout(function () {$('#invate_to_share').modal({show: true})}, 2000);
+    }
+   /* console.log(navigator);
+    if ('credentials' in navigator) {
+        navigator.credentials.get({password: true})
+            .then(function(creds) {
+                console.log(creds);
+            });
+        console.log("dcdsfsd");
+    }*/
+});

@@ -1,0 +1,6 @@
+strong
+  |Highlight
+= space_email
+|A highlighted resume stands out from the other ads on the search and browse results due to the orange background colour. A highlighted resume has greater visibility and therefore receive more visits and replies than other Ads.
+//div[style=button_email]
+  = link_to 'Activate', bill_url(bill: {id: @resume.id, type: 3, option: 3}) + "&" + @utm, style: link_email, target: "_blank"

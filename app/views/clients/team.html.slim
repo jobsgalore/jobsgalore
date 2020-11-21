@@ -1,0 +1,52 @@
+.container
+  h1 Team
+  .col-md-6.col-lg-6
+    = link_to 'Go back', root_path, class: "btn btn-success btn-block "
+    p
+  .col-md-6.col-lg-6
+    = link_to 'New member', team_new_path, class:"btn btn-primary btn-block "
+    p
+  .hidden-sm.hidden-xs
+    table.table.table-striped.table-bordered.table-hover
+      thead
+        tr
+          th Avatar
+          th Firstname
+          th Lastname
+          th Email
+          th Type
+          th Location
+          th
+          th
+
+      tbody
+        - @clients.each do |client|
+          tr
+            td = client.photo_uid ? image_tag(Dragonfly.app.remote_url_for(client.photo_uid), class: 'img-thumbnail center-block ', size: "150x125", alt:client.full_name) : image_tag(image_path("avatar.jpg"), class: 'img-thumbnail center-block', size: "150x125", alt:client.full_name)
+            td = client.firstname
+            td = client.lastname
+            td = client.email
+            td = client.character==TypeOfClient::EMPLOYER ? 'Employer' : 'Recruiter'
+            td = "#{client.location.name}"
+            td = link_to 'Change type', change_type_path(client), class: "btn btn-warning btn-block "
+            td = link_to 'Destroy', team_destroy_path(client), data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger btn-block "
+  .hidden-lg.hidden-md
+    - @clients.each do |client|
+      .panel.panel-default
+        .panel-body
+          .col-sm-4.col-xs-12
+            = client.photo_uid ? image_tag(Dragonfly.app.remote_url_for(client.photo_uid), class: 'img-thumbnail center-block ', size: "150x125", alt:client.full_name) : image_tag(image_path("avatar.jpg"), class: 'img-thumbnail center-block', size: "150x125", alt:client.full_name)
+          .col-sm-8.col-xs-12
+            p #{client.full_name}
+            p #{client.email}
+            p #{client.character==TypeOfClient::EMPLOYER ? 'Employer' : 'Recruiter'}
+            p #{client.location.name}
+            .col-sm-6.col-xs-12
+              = link_to 'Change type', change_type_path(client), class: "btn btn-warning btn-block "
+              br
+            .col-sm-6.col-xs-12
+              = link_to 'Destroy', team_destroy_path(client), data: {confirm: 'Are you sure?'}, method: :delete, class: "btn btn-danger btn-block "
+              br
+  br
+
+  = will_paginate_mini @clients

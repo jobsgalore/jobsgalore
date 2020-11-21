@@ -1,0 +1,8 @@
+.container
+  .row
+    .hidden-xs.hidden-sm.col-md-4.col-lg-4
+      = render 'ad/rtb_block', code: 'after_summary_skyscraper_md' if Propert.ads_turn_on?
+    .col-xs-12.col-sm-12.col-md-8.col-lg-8
+      h1 Edit information of a company
+      = render 'form', option:{url: { action: "update" }}
+

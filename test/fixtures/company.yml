@@ -1,0 +1,81 @@
+ 1031:
+    id: 1031
+    name: Hays Recruitment
+    size_id: 5
+    location_id: 61
+    site: https://www.hays.com.au/
+    logo_uid: 2019/01/28/19/12/54/cd747508-6db4-4af7-920b-f4b85d5ebac5/hays.jpg
+    recrutmentagency: true
+    description: '<h3><b>About Hays</b></h3><p>Hays is the leading global specialist
+      recruiting group. We are the expert at recruiting qualified, professional and
+      skilled people worldwide, being the market leader in Asia Pacific and the UK
+      and one of the market leaders in Continental Europe and Latin America. We operate
+      across the private and public sectors, dealing in permanent positions, contract
+      roles and temporary assignments.</p><h3><b>We recruit for:</b></h3><p><ul><li>Accountancy
+      &amp; Finance<br></li><li>Architecture<br></li><li>Banking<br></li><li>Construction<br></li><li>Contact
+      Centres<br></li><li>Education<br></li><li>Energy<br></li><li>Engineering<br></li><li>Executive<br></li><li>Facilities
+      Management<br></li><li>Healthcare<br></li><li>Human Resources<br></li><li>Insurance<br></li><li>IT<br></li><li>Legal<br></li><li>Life
+      Sciences<br></li><li>Logistics<br></li><li>Manufacturing &amp; Operations<br></li><li>Marketing
+      &amp; Digital<br></li><li>Office Support<br></li><li>Oil &amp; Gas<br></li><li>Policy
+      &amp; Strategy<br></li><li>Procurement<br></li><li>Property<br></li><li>Resources
+      &amp; Mining<br></li><li>Retail<br></li><li>Sales<br></li><li>Trades &amp; Labour<br></li></ul></p><p>Hays
+      plc (the "Group") is a leading global professional recruiting group and celebrated
+      its 50th anniversary in 2018. The Group is the expert at recruiting qualified,
+      professional and skilled people worldwide, being the market leader in the UK
+      and Asia Pacific and one of the market leaders in Continental Europe and Latin
+      America. The Group operates across the private and public sectors, dealing in
+      permanent positions, contract roles and temporary assignments. As at 30 June
+      2018 the Group employed 10,978 staff operating from 257 offices in 33 markets
+      across 20 specialisms. For the year ended 30 June 2018: </p><p>– the Group reported
+      net fees of £1.072 billion and operating profit (pre-exceptional items) of £243.4
+      million;</p><p>– the Group placed around 77,000 candidates into permanent jobs
+      and around 244,000 people into temporary assignments;</p><p>– 19% of Group net
+      fees were generated in Australia &amp; New Zealand, 26% in Germany, 24% in United
+      Kingdom &amp; Ireland and 31% in Rest of World (RoW);</p><p>– the temporary
+      placement business represented 58% of net fees and the permanent placement business
+      represented 42% of net fees;</p><p>– Hays operates in the following countries:
+      Australia, Austria, Belgium, Brazil, Canada, China, Colombia, Chile, the Czech
+      Republic, Denmark, France, Germany, Hungary, India, Ireland, Italy, Japan, Luxembourg,
+      Malaysia, Mexico, the Netherlands, New Zealand, Poland, Portugal, Romania, Russia,
+      Singapore, Spain, Sweden, Switzerland, UAE, the UK and the USA.</p>'
+    realy: 
+    created_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &1 2018-10-02 11:04:08.406185000 Z
+      zone: &2 !ruby/object:ActiveSupport::TimeZone
+        name: Etc/UTC
+      time: *1
+    updated_at: !ruby/object:ActiveSupport::TimeWithZone
+      utc: &3 2019-01-28 08:17:12.748128000 Z
+      zone: *2
+      time: *3
+    fts: "'000':229,237 '1.072':212 '10':186 '19':242 '20':197 '2018':124,182,205
+      '24':256 '243.4':222 '244':236 '257':191 '26':253 '30':180,203 '31':262 '33':194
+      '42':283 '50th':121 '58':273 '77':228 '978':187 'account':67 'across':49,163,196
+      'america':46,159 'anniversari':122 'architectur':69 'around':227,235 'asia':30,146
+      'assign':63,177,241 'australia':250,293 'austria':294 'bank':70 'belgium':295
+      'billion':213 'brazil':296 'busi':271,281 'canada':297 'candid':230 'celebr':119
+      'centr':73 'chile':300 'china':298 'colombia':299 'construct':71 'contact':72
+      'continent':42,155 'contract':59,173 'countri':292 'czech':302 'deal':55,169
+      'denmark':304 'digit':92 'educ':74 'employ':185 'end':202 'energi':75 'engin':76
+      'europ':43,156 'except':219 'execut':77 'expert':16,129 'facil':78 'fee':210,246,276,286
+      'financ':68 'follow':291 'franc':305 'gas':96 'generat':248 'germani':255,306
+      'global':9,114 'group':12,110,117,126,161,184,207,225,244 'hay':1A,4,5,107,287
+      'healthcar':80 'human':81 'hungari':307 'india':308 'insur':83 'ireland':260,309
+      'itali':310 'item':220 'japan':311 'job':233 'june':181,204 'kingdom':259 'labour':106
+      'latin':45,158 'lead':8,113 'leader':28,40,141,153 'legal':85 'life':86 'logist':88
+      'luxembourg':312 'malaysia':313 'manag':79 'manufactur':89 'market':27,39,91,140,152,195
+      'mexico':314 'million':223 'mine':102 'net':209,245,275,285 'netherland':316
+      'new':251,317 'offic':93,192 'oil':95 'one':36,149 'oper':48,90,162,189,215,288
+      'pacif':31,147 'peopl':23,136,238 'perman':57,171,232,279 'place':226 'placement':270,280
+      'plc':108 'poland':319 'polici':97 'portug':320 'posit':58,172 'pre':218 'pre-except':217
+      'privat':51,165 'procur':99 'profession':20,115,133 'profit':216 'properti':100
+      'public':53,167 'qualifi':19,132 'recruit':2A,11,18,65,116,131 'report':208
+      'repres':272,282 'republ':303 'resourc':82,101 'rest':264 'retail':103 'role':60,174
+      'romania':321 'row':267 'russia':322 'sale':104 'scienc':87 'sector':54,168
+      'singapor':323 'skill':22,135 'spain':324 'special':198 'specialist':10 'staff':188
+      'strategi':98 'support':94 'sweden':325 'switzerland':326 'temporari':62,176,240,269
+      'trade':105 'uae':327 'uk':34,144,329 'unit':258 'usa':332 'world':266 'worldwid':24,137
+      'year':201 'zealand':252,318"
+    industry_id: 16
+    big: true
+    names: 

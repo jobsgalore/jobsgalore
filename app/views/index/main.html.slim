@@ -1,0 +1,73 @@
+h1.none Jobsgalore. Jobs in Australia.
+- if @first
+  #first
+.hidden-xs.hidden-sm.not_print
+  .container
+    .row
+      .col-lg-9.col-md-9.col-sm-9
+        .main_image
+      .col-lg-3.col-md-3.col-sm-3
+        = link_to "Post a job ad for free", new_job_path, class: "btn btn-primary btn-block"
+        br
+      .col-lg-3.col-md-3.col-sm-3
+        = link_to "Post new resume", new_resume_path, class: "btn btn-success btn-block"
+        br
+      .col-lg-3.col-md-3.col-sm-3
+        = link_to "Send a message to employers", contacts_of_companies_path, class: "btn btn-warning btn-block", onclick: "experiment('contacts_of_companies', 'Вход');"
+        br
+      - if current_client&.admin?
+        .col-lg-3.col-md-3.col-sm-3
+          = link_to "Post new resume for a client", new_admin_client_with_resume_path, class: "btn btn-danger btn-block"
+          br
+    .row
+      h3.text-center
+        |More jobs in real time – Search&nbsp;
+        strong #{NumberOfJobsQuery.new.call}
+        |&nbsp;jobs now.
+      p
+    .row
+      .col-lg-3.col-md-3
+        = render 'index/main/inc/major_cities'
+        /= render('ad/main_page_after_locations_md') if Propert.ads_turn_on? TODO Непонятно что и зачем
+      .col-lg-6.col-md-6.hidden-sm.hidden-xs
+        -cache @main.jobs do
+          - if @main.jobs.present?
+            .well
+              ul.nav.nav-list
+                li.nav-header
+                  h4
+                    |#{@main.title}
+                .col-lg-6.col-md-6
+                  ul.nav.nav-list
+                    - @main.jobs[0..(@main.jobs.count >=5 ? 4 : @main.jobs.count - 1)].each do |job|
+                      = last_job(job)
+                - if @main.jobs.count >= 6
+                  .col-lg-6.col-md-6
+                    ul.nav.nav-list
+                      - @main.jobs[5..@main.jobs.count-1].each do |job|
+                        = last_job(job)
+      .col-lg-3.col-md-3.hidden-sm.hidden-xs
+        = render 'ad/rtb_block', code: "main_page_afte_locations_md" if Propert.ads_turn_on?
+.container.hidden-lg.hidden-md
+  .row
+    p.text-center
+      strong
+        = link_to "Upload your resume", new_resume_url
+        |&nbsp;-&nbsp;Let employers find you
+  br
+  br
+  .row
+    = render 'index/main/inc/numbers of jobs', number_of_jobs: @number_of_jobs
+    = main_page_search(@search)
+  br
+  .row
+    .col-xs-12.text-center
+      h3
+        |Are you hiring?
+    .col-xs-12.text-center
+      = link_to "Post a job ad for free", new_job_path, class: "btn btn-default btn-circle btn-block", rel: "nofollow"
+  br
+  .row
+    p.col-md-6.text-center
+      strong
+        = link_to "Send a message to employers", contacts_of_companies_path

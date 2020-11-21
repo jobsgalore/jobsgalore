@@ -1,0 +1,1 @@
+json.array! @company.emails_to_grid

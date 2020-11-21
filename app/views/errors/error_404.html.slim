@@ -1,0 +1,39 @@
+= render file: "#{Rails.root}/public/404"
+.row.hidden-xs.not_print
+  .container
+    .header
+      .row
+        .col-lg-3.col-md-3.col-sm-3.col-md-offset-9.col-lg-offset-9.col-sm-offset-9
+          = link_to "Post a job ad for free", new_job_path, class: "btn btn-primary btn-block", rel:"nofollow"
+          p
+      .row
+        .col-lg-3.col-md-3.col-sm-3.col-md-offset-9.col-lg-offset-9.col-sm-offset-9
+          = link_to "Post new resume", new_resume_path, class: "btn btn-success btn-block", rel:"nofollow"
+          p
+.container
+  .row
+    h3.text-center
+      |More jobs in real time – Search&nbsp;
+      strong #{Location.select(:counts_jobs)&.inject(0) {|rez, elem| rez +=elem.counts_jobs if elem.counts_jobs}}
+      |&nbsp;jobs now.
+    p
+  .row.hidden-lg.hidden-md
+    .col-sm-12.col-xs-12.text-center
+      |Do you want to get a dream job?
+    .col-sm-6.col-xs-6.align-center
+      |Let employers find you
+    .col-sm-6.col-xs-6
+      = link_to "Post new resume", new_resume_path, class: "btn btn-danger btn-block", rel: "nofollow"
+      p
+  .row
+      .well
+        ul.nav.nav-list
+          li.nav-header
+            h4
+              |Major cities
+          -@main.city.each do |t|
+            li.col-sm-4.col-md-12.col-lg-12
+              = link_to local_object_path(t,Objects::JOBS.code)  do
+                |#{t.suburb}
+                span.badge[style = "float: right"]
+                  |#{t.counts_jobs}

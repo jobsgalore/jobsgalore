@@ -1,0 +1,9 @@
+The job opportunity <%=@job.title%>(<%= job_url(@job) + "&" + @utm%> in <%=@job.location.name%> will be removed in <%=@days == 1 ? "1 day" : "2 days"%>. You can prolong it up to 14 days.
+<%=prolong_url(@job) + "&" + @utm%>
+<% if @job.highlight.blank? or @job.urgent.blank?%>
+
+You can also activate:
+===========================
+<%=render 'jobs_mailer/party_of_email/highlight.text.erb'%>
+<%=render 'jobs_mailer/party_of_email/urgent.text.erb'%>
+<% end %>

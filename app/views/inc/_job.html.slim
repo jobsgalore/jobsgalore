@@ -1,0 +1,51 @@
+- edit ||=false
+.hidden-xs.hidden-sm
+  .panel.panel-default
+    div[class="panel-body #{class_extras(job)}"]
+      .col-md-9
+        h3
+          = link_to(highlight(job.title, Search.str_to_highlight(query)), job_highlight_view_path(id:job, text:query), class: 'text-warning')
+        - if job.salary.present?
+          p = job.salary
+        - if job.description
+          = highlight(job.description_text + "...",  Search.str_to_highlight(query))
+        p
+        span
+          = link_to job.company.name, job.company, class: 'text-success'
+          | &nbsp; - &nbsp;
+        span
+          = link_location(job.location.name, job.location, Objects::JOBS, class: 'text-warning')
+        span.pull-right
+          a[href= apply_path(job) role= "button"  aria-disabled="true"  rel="nofollow"]
+            |Apply
+      .col-md-3
+        - if edit && (job.client == current_client || current_client&.admin? || job.company ==  current_client&.company)
+          = render 'inc/btn', object: job, option: {class:'job', type:2, edit: edit}
+        - else
+          .row
+            .text-center
+              = link_to(job.company.name.truncate(50, separator: " "), job.company)
+            .text-center
+              = link_to(company_logo(job.company, "130px", "100px"), job.company)
+        .row.text-center
+          = "Posted: " +job.posted_date
+
+.hidden-md.hidden-lg
+  .row.border_top[class=" #{class_extras(job)}"]
+    h3
+      = link_to(highlight(job.title, Search.str_to_highlight(query)), job_highlight_view_path(id:job, text:query))
+    span
+      = link_to job.company.name, job.company, class: 'text-success'
+    | &nbsp; - &nbsp;
+    span.text-warning
+      = link_location(job.location.name, job.location, Objects::JOBS, class: 'text-warning')
+    - if not job.salary.blank? then
+      p = job.salary
+    p
+      = highlight(job.description_text + "...", Search.str_to_highlight(query))
+    p.text-muted
+      span
+        |#{job.posted_date}
+      span.pull-right
+        a[href= apply_path(job) role='button' aria-disabled='true' rel="nofollow"]
+          |Apply

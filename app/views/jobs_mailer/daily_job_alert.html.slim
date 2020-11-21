@@ -1,0 +1,23 @@
+-if @unsubscribe.present?
+  - content_for :unsubscribe do
+    -puts @type ? unsubscribe_not_client_url(@unsubscribe) : unsubscribe_client_url(@unsubscribe)
+    |#{link_to("Unsubscribe", (@type ? unsubscribe_not_client_url(@unsubscribe) : unsubscribe_client_url(@unsubscribe)))} #{@email} from this email
+div[style=title_email]
+  div[style=h1_email]
+    |Daily Jobs Alert
+div[style=body_email]
+  -@list_of_jobs.each do |job|
+    div[style=h3_email]
+      = link_to job.title.capitalize, job_url(job) + @utm, style: "color:#66512c"
+    | #{link_to job.company.name, company_url(job.company)  + @utm, style: "color: #3c763d; "} - #{link_to job.location.name , local_object_url(job.location.id,Objects::JOBS.code)+ @utm, style: "color: #66512c;"}
+    = space_email
+    - if not job.salary.blank?
+      = job.salary
+    div[style=message_email]
+      = HtmlToPlainText.plain_text(job.description).squish.truncate(300, separator: ' ', omission: '') + "..."
+    div[style=button_email]
+      = link_to 'Show', job_url(job) + @utm, style: link_email, target: "_blank"
+    = space_email true
+    = space_email
+= render "inc_mailer/mailing"
+

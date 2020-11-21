@@ -1,0 +1,15 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Your job opportunity was successfully removed!
+div[style=body_email]
+  |The job opportunity &nbsp;
+  strong
+    |«#{@job.title}»
+  |&nbsp;in&nbsp;
+  strong
+    |#{@job.location.name}
+  |&nbsp;was successfully removed.
+  =space_email
+  |You can post a new job opportunity.
+  div[style=button_email]
+    = link_to 'Post a job ad for free', new_job_url + @utm, style: link_email, target: "_blank"

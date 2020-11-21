@@ -1,0 +1,60 @@
+.btn-circle {
+  border-radius: 22px;
+  text-align: center;
+  padding-top: 7px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 5px 5px 5px 0px;
+  font-size: 18px;
+}
+
+.sticky {
+  z-index: 4;
+  position: sticky;
+  bottom: 10px;
+  min-height: 2em;
+}
+
+
+.btn-linkedin {
+  color: #fff;
+  background-color: #007CCB;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-google{
+  color: #fff;
+  background-color: #F04500;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-twitter{
+  color: #fff;
+  background-color: #1DA1F2;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-email{
+  color: #fff;
+  background-color: #A56EE3;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-facebook{
+  color: #fff;
+  background-color: #2760D8;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-social {
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Trix conf
+trix-toolbar > .button_row > .button_group > .link, .strike, .nesting-level {
+  display: none;
+}

@@ -1,0 +1,61 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Изменения за день
+div[style=body_email]
+  div[style=h3_email]
+    |Новые резюме за день!
+  =@arg[:new_resumes]
+  =space_email
+  div[style=h3_email]
+    |Новые ваканнсии
+  =@arg[:new_jobs]
+  =space_email
+  div[style=h3_email]
+    |Новые клиенты соискатели
+  =@arg[:new_client_applicants]
+  = space_email
+  div[style=h3_email]
+    |Новые клиенты работодатели
+  = @arg[:new_client_employers]
+  = space_email
+  div[style=h3_email]
+    |Новые клиентские подписки
+  = @arg[:new_client_alert]
+  = space_email
+  div[style=h3_email]
+    |Новых компаний
+  =@arg[:new_company]
+  = space_email
+  div[style=h3_email]
+    |Заполенные компании
+  = @arg[:new_company_description]
+  = space_email
+  div[style=h3_email]
+    |Новые транзакции
+  |#{@arg[:new_pay_count]} всего || #{@arg[:new_pay_sum]} $
+  = space_email
+  div[style=h3_email]
+    |Новые просмотры резюме
+  = @arg[:new_viewed_resume]
+  = space_email
+  div[style=h3_email]
+    |Новые просмотры работы
+  = @arg[:new_viewed_job]
+  = space_email
+  div[style=h3_email]
+    |Новые переходы
+  = @arg[:new_respondeds]
+  = space_email
+  div[style=h3_email]
+    |Процент заполненых
+  = @arg[:percent_of_full]
+  = space_email
+  div[style=h3_email]
+    |Новые емейлы для рассылки
+  = @arg[:amont_of_emails]
+  = space_email
+  div[style=h3_email]
+    |Всего рассылок | Рассылки ожидающие оплаты | Рассылки ожидающие подтверждения
+  = "#{@arg[:all_mailings]} | #{@arg[:expect_of_payment_mailings]} | #{@arg[:approval_mailings]}"
+  = space_email
+

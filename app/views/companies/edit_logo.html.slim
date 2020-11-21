@@ -1,0 +1,28 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
+      h2 Update logo
+      =form_for @company, html:{enctype: "multipart/form-data"},  url: update_logo_path do |f|
+        - if @company.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@company.errors.count, "error")} prohibited this client from being saved:"
+            ul
+              - @company.errors.full_messages.each do |message|
+                li = message
+        hr.colorgraph
+        .form-group.text-center
+          - if @company.logo.nil?
+            = image_tag(image_path("company_profile.jpg"), size: "300x300", class: 'img-thumbnail', alt: @company.name)
+          - else
+            = image_tag(Dragonfly.app.remote_url_for(@company.logo_uid), class: 'img-thumbnail', alt: @company.name)
+        .form-group
+          = f.label "Logo"
+          br
+          = react_component('Fileinput', id: "company_logo", name: "company[logo]", place_holder: "empty")
+        hr.colorgraph
+        .row
+          .col-xs-6.col-md-6
+            = f.submit "Update", class: "btn btn-primary btn-block"
+          .col-xs-6.col-md-6
+            = link_to "Back", :back, class: "btn btn-success btn-block"
+        br

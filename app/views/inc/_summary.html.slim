@@ -1,0 +1,50 @@
+h4.text-center
+  |Summary
+p
+  strong
+    | Posted:&nbsp;
+  span
+    =object.posted_date
+-if object.class==JobDecorator
+  .hidden-md.hidden-lg.hidden-sm
+    p
+      strong
+        |Company: &nbsp;
+      = link_to(object.company.name,object.company)
+p
+  strong
+    |Location: &nbsp;
+  = link_location(object.location.name, object.location, object.class==JobDecorator ? Objects::JOBS : Objects::RESUMES, class: 'text-warning')
+- if object.salary.present?
+  p
+    strong
+      |Salary: &nbsp;
+    span
+      | #{object.salary}
+-if object.class==ResumeDecorator
+  p
+    strong
+      |Professional area:
+  ul
+    li
+      =link_industry(object.industry.name, object.industry,  Objects::RESUMES, class: 'text-success')
+- if object.class==JobDecorator && object.deleted?
+  p
+    span.glyphicon.glyphicon-remove
+    strong
+      | &nbsp; CLOSED
+- if object.highlight
+  p
+    span.glyphicon.glyphicon-paperclip
+    strong
+      | &nbsp; Highlight
+- if object.urgent
+  p
+    span.glyphicon.glyphicon-pushpin
+    strong
+      | &nbsp; Urgent
+- if object.top
+  p
+    span.glyphicon.glyphicon-hand-up
+    strong
+      | &nbsp; Ad Top

@@ -1,0 +1,63 @@
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ div {
+    display: block;
+}
+/* вид текста label */
+.label_not_checked{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.label_checked ~ div {
+    padding-bottom: 10px;
+}
+/* вид текста label при активном переключателе */
+.label_checked{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #449d44;
+    cursor: pointer;
+    display: inline-block;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+
+/* анимация при появлении скрытых блоков */
+
+.hide + .label_not_checked:before {
+    background-color: #286090;
+    color: #fff;
+    content: "+";
+    display: block;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    margin: 3px 3px;
+    text-align: center;
+    width: 16px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.hide + .label_checked:before {
+    background-color: #286090;
+    color: #fff;
+    content: "\2212";
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    margin: 3px 5px;
+    text-align: center;
+    width: 16px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}

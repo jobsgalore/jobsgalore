@@ -1,0 +1,38 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
+      h2 Change your password
+      hr.colorgraph
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+        = devise_error_messages!
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          div
+            |Currently waiting confirmation for:
+            = resource.unconfirmed_email
+        .form-group
+          = f.label :current_password
+          i
+            |(we need your current password to confirm your changes)
+          br
+          = f.password_field :current_password, autocomplete: "off", class: "form-control"
+        .form-group
+          = f.label "New password "
+          - if @minimum_password_length
+            em
+              |(#{@minimum_password_length} characters minimum)
+          br
+          = f.password_field :password, autocomplete: "off",class:"form-control"
+
+        .form-group>
+          = f.label :password_confirmation
+          br
+          = f.password_field :password_confirmation, autocomplete: "off", class:"form-control"
+        hr.colorgraph
+        .row
+          .col-xs-6.col-md-6.col-sm-6.col-lg-6
+            = link_to "Back", :back, class:"btn btn-success btn-block"
+          .col-xs-6.col-md-6.col-sm-6.col-lg-6
+            = f.submit "Update", class: "btn btn-primary btn-block"
+        br
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      = render 'ad/rtb_block', code: 'before_similar_job_md' if Propert.ads_turn_on?

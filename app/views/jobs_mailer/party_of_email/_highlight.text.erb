@@ -1,0 +1,6 @@
+<%if @job.highlight.blank?%>
+Highlight $<%=Services::HIGHLIGHT.price_integer%> (7 day)
+
+A highlighted job opportunity stands out from the other ads on the search and browse results due to the orange background colour. A highlighted job opportunity has greater visibility and therefore receive more visits and replies than other Ads.
+<%= bill_url(bill: {id: @job.id, type: 2, option: 3}) + "&" + @utm%>
+<% end %>

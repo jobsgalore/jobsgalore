@@ -1,0 +1,12 @@
+- if object.class == JobDecorator #&& object.apply.blank? #&& 1==2 #TODO Убрать
+  .btn_margin
+    a.btn.btn-primary.btn-block[href= apply_path(object)   rel="nofollow"]
+      |Apply for job
+- elsif object.class == ResumeDecorator
+  .btn_margin
+    a.btn.btn-primary.btn-block[href= msg_path(object) rel="nofollow"]
+      |Send a message
+- else
+  .btn_margin
+    button.btn.btn-primary.btn-block[data-toggle="modal" data-target="#contact"]
+      |Contact

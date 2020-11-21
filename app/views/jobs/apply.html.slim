@@ -1,0 +1,16 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
+      = react_component("ApplyJob",
+              name:'apply',
+              title: {name: @job.title.capitalize, link: job_url},
+              job:@job.id,
+              company:@job.company.name,
+              location:{name:@job.location.name, id:@job.location.id},
+              linkedin_url: client_linkedin_omniauth_authorize_url,
+              user_from_linkedin: current_client&.linkedin?,
+              linkedin_resume_url: linkedin_resume_url,
+              url_industries: industries_url,
+              resumes: current_client&.resumes_for_apply,
+              url_for_parse: file_to_html_url,
+              send_url:send_url)

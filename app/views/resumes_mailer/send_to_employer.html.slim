@@ -1,0 +1,8 @@
+div[style=title_email]
+  div[style=h1_email]
+    |New message
+div[style=body_email]
+  | #{@resume.client.full_name}(#{link_to @resume.client.email, "mailto:#{@resume.client.email}?subject=RE:#{@job.title}"}) applied to #{ link_to @job.title, job_url(@job) +"?" + @utm, target:"_blank"} job in #{@job.location.name}:
+  div[style=message_email]
+    = render inline: @letter
+

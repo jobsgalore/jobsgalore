@@ -1,0 +1,50 @@
+- meta_for_resume(@resume)
+-cache([@resume,@query]) do
+  .container
+    .hidden-sm.hidden-xs
+      .col-md-8
+        = render 'ad/rtb_block', code: 'before_ad_md' if Propert.ads_turn_on?
+        .row.well
+          h1.text-center
+            = highlight(@resume.title, Search.str_to_highlight(@query))
+          p
+            = highlight(@resume.render_description, Search.str_to_highlight(@query))
+        = render 'ad/rtb_block', code: 'before_similar_job_md' if Propert.ads_turn_on?
+      .col-md-4
+        .panel.panel-default
+          .panel-body
+            - if current_client && (current_client.resp? || (@resume.client.id == current_client.id) || current_client.admin?)
+              h4.text-center
+                = @resume.client.full_name
+              = image_bg(@resume.client.photo_url, "contain", "300px", "250px", autoload: false)
+            - else
+              h4.text-center
+                |Anonymous
+              p
+              = image_bg(image_path("avatar.jpg"), "contain", "300px", "250px", autoload: false)
+            .well
+              = render 'inc/summary', object: @resume
+              .btn_margin
+                = render 'inc/btn/btn_edit_xs_sm', object: @resume, option: {cl: "dropdown", min: false, class: 'resume', type: 3}
+                /= render 'inc/btn', object: @resume, option: {class: 'resume', type: 3}
+                .text-center
+                  = social_button_resume(@resume)
+        = render 'ad/rtb_block', code: "after_summary_md" if Propert.ads_turn_on?
+    .hidden-md.hidden-lg
+      .row
+        .col-xs-12
+          h3.text-center
+            = highlight(@resume.title, Search.str_to_highlight(@query))
+          = render 'inc/summary', object: @resume
+          = render 'ad/rtb_block', code: "before_ad_xs" if Propert.ads_turn_on?
+          p
+          .btn-group.btn-group-justified
+            = render 'inc/btn/btn_edit_xs_sm', object: @resume, option: {cl: "dropdown", class: 'resume', type: 3} if can? :destroy, @resume
+      .row
+        .col-sm-12
+          p
+            = highlight(@resume.render_description, Search.str_to_highlight(@query))
+      = render 'inc/btn/btn_apply_xs_sm', object: @resume, option: {cl: "dropdown", class: 'resume', type: 3, show: true} unless can? :destroy, @resume
+      p
+        .text-center
+          = social_button_resume(@resume)

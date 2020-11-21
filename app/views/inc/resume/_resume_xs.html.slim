@@ -1,0 +1,20 @@
+.row.border_top[class=" #{class_extras(resume)}"]
+  - if can? :destroy, resume
+    = render 'inc/btn/btn_edit_xs_sm', object: resume, option: {cl: "btn-group", min: true, class: 'resume', type: 3}
+    | &nbsp &nbsp
+  span[style="font-size: 24px; word-wrap: break-word; box-sizing: border-box; font-weight: 500;" ]
+    = link_to(highlight(resume.title.capitalize, Search.str_to_highlight(query)), resume_highlight_view_path(id: resume, text: query))
+  p
+  span.text-success
+    = (current_client && (resume.client == current_client || current_client.admin? || current_client.resp?)) ? resume.client&.full_name : "Anonymous"
+  | &nbsp; - &nbsp;
+  span.text-warning
+    = link_location(resume.location.name, resume.location, Objects::RESUMES, class: 'text-warning')
+
+  - if resume.salary.blank?
+    p = resume.salary
+  p
+    = highlight(resume.description_text + "...", Search.str_to_highlight(query))
+  p.text-muted
+    span
+      |#{resume.posted_date}

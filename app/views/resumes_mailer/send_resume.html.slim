@@ -1,0 +1,25 @@
+div[style=title_email]
+  div[style=h1_email]
+    -if @current_client
+      =link_to @resume.client.full_name, resume_url(@resume) + @utm, target: "_blank"
+    -else
+      =link_to @resume.title, resume_url(@resume) + @utm, target: "_blank"
+div[style=body_email]
+  - if @current_client
+    div[style=h3_email]
+      =link_to @resume.title, resume_url(@resume) + @utm, target: "_blank"
+  - if not @resume.salary.blank?
+    div[align="left"]
+      strong
+        |Desired Salary: &nbsp;
+      = "$ #{@resume.salary.to_i.to_s}"
+    = space_email
+  = HtmlToPlainText.plain_text(@resume.description).squish.truncate(300, separator: ' ', omission: '') + "..."
+  = space_email
+  | #{link_to @resume.location.name , local_object_url(@resume.location.id,Objects::RESUMES.code)+ @utm, style: "color: #66512c;"}
+  div[style=button_email]
+    = link_to 'Show', resume_url(@resume) + @utm, style: link_email, target: "_blank"
+  = space_email
+  |#{link_to('JobsGalore.eu', root_url)} - More resumes in real time.
+= render "inc_mailer/post_job_free"
+

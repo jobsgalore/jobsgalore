@@ -1,0 +1,23 @@
+.container
+  - if jobs then
+    h1 My Jobs
+    .col-lg-3.col-md-3.col-sm-3.hidden-xs
+      .row.well.text-center
+        = image_bg(@client.photo_url,  "contain", "200px", "200px")
+        p
+        = link_to "Post a job ad for free", new_job_path, class: "btn btn-primary btn-block btn_margin"
+    .col-sm-offset-1.col-md-offset-0.col-lg-offset-0.col-sm-8.col-md-9.col-lg-9.col-xs-12
+      = render partial: 'inc/job', collection: @jobs, as: :job, locals: {query: '', edit: true}
+      =render 'inc/btn/btn_new_job_xs_sm'
+    .text-center
+      = will_paginate_mini @jobs if @jobs
+  - else
+    h1 My Resumes
+    .col-lg-3.col-md-3.col-sm-3.hidden-xs
+      .row.well.text-center
+        = image_bg(@client.photo_url, "contain", "200px", "200px")
+        p
+        = link_to "Post new resume", new_resume_path, class: "btn btn-primary btn-block btn_margin"
+    .col-sm-offset-1.col-md-offset-0.col-lg-offset-0.col-sm-8.col-md-9.col-lg-9.col-xs-12
+      = render partial: 'inc/resume', collection: @client.resume.object.order(created_at:  :desc).decorate, locals:{query:'', edit: true}
+      =render 'inc/btn/btn_new_resume_xs_sm'

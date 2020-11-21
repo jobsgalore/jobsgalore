@@ -1,0 +1,5 @@
+.container
+  h1 New client
+  = form_for @client, url: { action: "admin_create" } do |f|
+    == render 'admin_form',f:f
+

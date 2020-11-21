@@ -1,0 +1,5 @@
+______________________________________________________________________________
+Dear Dear Sir/Madam,
+<%=@letter.client.full_name%>(<%=@letter.client.email%>)  sent you a message.
+______________________________________________________________________________
+<%= HtmlToPlainText.plain_text(@letter.message).squish %>

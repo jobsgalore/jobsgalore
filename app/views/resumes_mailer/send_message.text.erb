@@ -1,0 +1,6 @@
+______________________________________________________________________________
+Dear <%=@resume.client.full_name%>,
+<%=@client.full_name%>(<%=@client.email%>)  sent you a message.
+______________________________________________________________________________
+<%= HtmlToPlainText.plain_text(@letter).squish %>
+

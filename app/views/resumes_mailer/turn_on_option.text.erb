@@ -1,0 +1,10 @@
+The resume <%=@resume.title%>(<%=resume_url(@resume) + "&" + @utm%>).
+
+The option <%=@option%> has successfully activated.
+
+<% if @resume.highlight.blank? or @resume.urgent.blank? %>
+You can also activate:
+===================================================
+<%=render 'resumes_mailer/party_of_email/highlight.text.erb'%>
+<%=render 'resumes_mailer/party_of_email/urgent.text.erb'%>
+<%end %>

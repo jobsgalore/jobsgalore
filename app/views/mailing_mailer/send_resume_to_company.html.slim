@@ -1,0 +1,10 @@
+div[style=title_email]
+  div[style=h1_email]
+    |New message
+div[style=body_email]
+  strong
+    |Dear Sir/Madam
+  =space_email
+  | #{@letter.client.full_name} #{link_to @letter.client.email, "mailto:#{@letter.client.email}?subject=RE: New message from jobsgalore.eu"}  sent you a message:
+  div[style=message_email]
+    = render inline: @letter.message

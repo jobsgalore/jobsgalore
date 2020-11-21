@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-6.col-lg-6.col-md-offset-3.col-lg-offset-3
+      = form_for(:contact, html:{enctype: "multipart/form-data"}, url: send_customers_path, method: :post, ) do |f|
+        h2 Begin!!!!
+        hr.colorgraph
+        .row
+          .col-xs-6.col-md-6
+            = f.submit "Send", class: "btn btn-primary btn-block"
+            p
+          .col-xs-6.col-md-6
+            button.btn.btn-success.btn-block[onclick="history.back()"]
+              |Back
+            p
+

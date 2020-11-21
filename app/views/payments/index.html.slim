@@ -1,0 +1,24 @@
+h1 Payment
+
+table.table.table-bordered
+  thead
+    tr
+      th Params
+      th ID Product
+      th Kind
+      th Kind pay
+      th Status
+      th ID Transaction
+  tbody
+    - @payment.each do |payment|
+      tr
+        td = payment.params
+        td = payment.product_id
+        td = payment.kind
+        td = payment.kindpay
+        td = payment.status
+        td = payment.transaction_id
+
+br
+
+

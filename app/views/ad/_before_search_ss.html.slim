@@ -1,0 +1,21 @@
+- search_code = Propert.find_by_code('cc')&.value
+-if search_code.present?
+  .adaptive[id = "yandex_direct_#{search_code}"]
+    javascript:
+        (function (w, d, n, s, t) {
+            w[n] = w[n] || [];
+            w[n].push(function () {
+                Ya.Context.AdvManager.render({
+                    blockId: "#{search_code}",
+                    renderTo: ["yandex_direct_#{search_code}"],
+                    searchText: "#{query.present? ? query.gsub('develop', '') : 'jobs'}",
+                    searchPageNumber: parseInt("#{page || 1}")
+                });
+            });
+            t = d.getElementsByTagName("script")[0];
+            s = d.createElement("script");
+            s.type = "text/javascript";
+            s.src = "//an.yandex.ru/system/context.js";
+            s.async = true;
+            t.parentNode.insertBefore(s, t);
+        })(this, this.document, "yandexContextAsyncCallbacks");

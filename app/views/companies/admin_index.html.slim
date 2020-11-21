@@ -1,0 +1,44 @@
+.container-fluid
+  .col-md-6.col-lg-6
+    h1 Listing companies
+  .col-md-6.col-lg-6
+    = link_to 'New Company', admin_company_new_path, class:"btn btn-primary btn-block "
+  p
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th ID
+        th Name
+        th Size
+        th Location
+        th Site
+        th Clients
+        th Recrutmentagency
+        th Description
+        th Industry
+        th
+        th
+        th
+        th
+        th
+
+    tbody
+      - @companies.each do |company|
+        tr
+          td = company.id
+          td = company.name
+          td = company.size.size if company.size
+          td = "#{company.location.suburb}, #{company.location.state}"
+          td = company.site
+          td = company.client.pluck(:firstname, :lastname).join(' ')
+          td = company.recrutmentagency
+          td = company.description&.truncate(50)
+          td = company.industry.name
+          th = link_to "Show team", admin_company_team_path(company), class: "btn btn-success btn-block "
+          td = link_to 'Edit photo', admin_company_edit_logo_path(company), class: "btn btn-info btn-block "
+          td = link_to 'Show', admin_company_show_path(company), class: "btn btn-primary btn-block "
+          td = link_to 'Edit', admin_company_edit_path(company), class: "btn btn-success btn-block "
+          td = link_to 'Destroy', admin_company_destroy_path(company), data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger btn-block "
+
+  br
+  = will_paginate_mini @companies

@@ -1,0 +1,31 @@
+.panel.panel-default
+  div[class="panel-body #{class_extras(resume)}"]
+    .col-lg-9.col-md-9.col-sm-10
+      h3
+        = link_to(highlight(resume.title, Search.str_to_highlight(query)),  resume_highlight_view_path(id:resume, text:query), class: 'text-warning')
+      - if resume.salary.blank?
+        p = resume.salary
+      p
+        = highlight(resume.description_text + "...", Search.str_to_highlight(query))
+      span
+        = link_location(resume.location.name, resume.location, Objects::RESUMES, class: 'text-warning')
+    .col-lg-3.col-md-3.col-sm-2
+      - if edit && current_client && (resume.client == current_client || current_client.admin?)
+        /= render 'inc/btn', object: resume, option: {class: 'resume', type: 3}
+        = render 'inc/btn/btn_edit_xs_sm', object: resume, option: {cl: "dropdown", min: false, class: 'resume', type: 3}
+      - elsif current_client&.resp?
+        .row
+          .row.text-center
+            = resume.client&.full_name
+          .row.text-center
+            = image_bg(resume.client&.photo_url, "contain", "130px", "100px")
+          .row.text-center
+            = "Posted: " +resume.posted_date
+      - else
+        .row
+          .row.text-center
+            = "Anonymous"
+          .row.text-center
+            = image_bg(image_url("avatar.jpg"), "contain", "130px", "100px")
+          .row.text-center
+            = "Posted: " +resume.posted_date

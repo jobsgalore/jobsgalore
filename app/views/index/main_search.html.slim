@@ -1,0 +1,34 @@
+.container
+  h1 =@result.name
+  .col-sm-12
+    .row
+      .col-lg-8.col-md-8.col-sm-8
+        .row
+          p.col-md-6
+            strong
+              = link_to "Upload your resume", new_resume_url
+              |&nbsp;-&nbsp;Let employers find you
+        p
+          =sort_by_search(@result.sort)
+        p.text-right
+          = page_entries_info @result.objs, {model:@result.type.name}
+    .row
+      .col-lg-8.col-md-8.col-sm-8
+        = render('ad/before_search_ss', query: @result.query, location: @result.param[:location_name], page: @result.page) if Propert.ads_turn_on?
+        - if @result.type == Objects::JOBS
+          = render partial: 'inc/job', collection: @result.objs, as: :job, locals:{query: @result.query}
+        - elsif @result.type==Objects::COMPANIES
+          = render partial: 'inc/company', collection: @result.objs, as: :company, locals:{query: @result.query}
+        - else @result.type==Objects::RESUMES
+          = render partial: 'inc/resume', collection: @result.objs, as: :resume, locals:{query: @result.query}
+        .text-center
+          = will_paginate_mini @result.objs
+        = render('ad/after_search', query: @result.query, location: @result.param[:location_name], page: @result.page) if Propert.ads_turn_on?
+      .col-lg-4.col-md-4.col-sm-4.hidden-xs
+        = render 'ad/rtb_block', code: 'after_summary_skyscraper_md' if Propert.ads_turn_on?
+    .row
+    - if @result.type == Objects::JOBS
+      = render 'inc/btn/btn_new_resume_xs_sm'
+    - if @result.type==Objects::RESUMES
+      = render 'inc/btn/btn_new_job_xs_sm'
+= render 'index/inc/alert', query: @search if @result.type == Objects::JOBS && !cookies[:alert] && !client_signed_in? && @search && @search[:value] && @search[:value] != ''

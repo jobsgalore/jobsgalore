@@ -1,0 +1,12 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Your resume was successfully removed!
+div[style=body_email]
+  |The resume &nbsp;
+  strong
+    |«#{@title}»&nbsp;
+  |was successfully removed.
+  =space_email
+  |You can post a new resume.
+  div[style=button_email]
+    = link_to 'Post new resume', new_resume_url + @utm, style: link_email, target: "_blank"

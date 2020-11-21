@@ -1,0 +1,59 @@
+- if client_signed_in?
+  ul.nav.navbar-nav
+    li
+      a.nav-link.dropdown-toggle[href="#" data-toggle="dropdown"]
+        = current_client.full_name
+        b.caret
+      ul.dropdown-menu
+        li
+          = link_to new_job_path do
+            |&nbsp;
+            span.glyphicon.glyphicon-briefcase
+            |&nbsp; Post a job ad for free
+        li
+          = link_to new_resume_path do
+            |&nbsp;
+            span.glyphicon.glyphicon-paperclip
+            |&nbsp; Upload your resume
+        li
+          = link_to contacts_of_companies_path, onclick: "experiment('contacts_of_companies', 'Вход');" do
+            |&nbsp;
+            span.glyphicon.glyphicon-envelope
+            |&nbsp; Send a message to employers
+        - if current_client.resp?
+          li
+            = link_to jobs_root_path do
+              span.glyphicon.glyphicon-plus
+              | &nbsp; My jobs
+        li
+          = link_to resumes_root_path do
+            span.glyphicon.glyphicon-user
+            | &nbsp; My resumes
+        li
+          = link_to contacts_of_companies_path do
+            span.glyphicon.glyphicon-envelope
+            | &nbsp; Mailbox
+        li
+          = link_to settings_path do
+            span.glyphicon.glyphicon-cog
+            | &nbsp; Settings
+        - if current_client.employer?
+          li
+            = link_to settings_company_path do
+              span.glyphicon.glyphicon-cd
+              | &nbsp; Company
+        - if current_client.admin?
+          li
+            = link_to admin_path do
+              span.glyphicon.glyphicon-eye-open
+              | &nbsp; Administration of site
+        li
+          = link_to destroy_client_session_path, :method => :delete do
+            span.glyphicon.glyphicon-log-out
+            | &nbsp; Log out
+- else
+  ul.nav.navbar-nav
+    li
+      = link_to 'Log in ', new_client_session_path
+    li
+      = link_to 'Sign up', new_client_registration_path

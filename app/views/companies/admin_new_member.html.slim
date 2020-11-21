@@ -1,0 +1,6 @@
+.container
+  h1 New company
+  = form_for @client, url: { action: "admin_create_member" } do |f|
+    .form-group.invisible
+      = text_field :id, :id, value:@company
+    == render '/clients/admin_form',f:f

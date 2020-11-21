@@ -1,0 +1,22 @@
+div[style=title_email]
+  div[style=h1_email]
+    |The option "#{@option}" was turned on
+div[style=body_email]
+  strong
+    |The job opportunity #{@job.title} in #{@job.location.name}.
+  =space_email
+  |The option "#{@option}" has successfully activated.
+  div[style=button_email]
+    = link_to 'Show', job_url(@job) + "&" + @utm, style: link_email, target: "_blank"
+  - if @job.highlight.blank? or @job.urgent.blank?
+    =space_email
+    =space_email
+    =space_email true
+    =space_email
+    div[style=h3_email]
+      |You can also activate:
+    -if @job.highlight.blank?
+      =render 'jobs_mailer/party_of_email/highlight'
+    = space_email
+    - if @job.urgent.blank?
+      =render 'jobs_mailer/party_of_email/urgent'

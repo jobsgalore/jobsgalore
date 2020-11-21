@@ -1,0 +1,6 @@
+Hello <%="#{@resource.firstname} #{@resource.lastname}"%>,
+============================================================
+Your account has been locked due to an excessive number of unsuccessful sign in attempts.
+
+Click the link below to unlock your account:
+<%= unlock_url(@resource, unlock_token: @token) %>

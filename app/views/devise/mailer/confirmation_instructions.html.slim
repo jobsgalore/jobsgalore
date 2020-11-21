@@ -1,0 +1,7 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Welcome #{@resource.firstname} #{@resource.lastname}
+div[style=body_email]
+  |You can confirm your account email through the link below:
+  div[style=button_email]
+    = link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token), style: link_email, target:"_blank"

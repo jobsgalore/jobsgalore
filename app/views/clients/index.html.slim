@@ -1,0 +1,72 @@
+.container
+  h1 Listing clients
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th ID
+        th Firstname
+        th Lastname
+        th Email
+        th Resp
+        th Phone
+        th Photo
+        th Gender
+        th Location
+        th encrypted_password
+        th reset_password_token
+        th reset_password_sent_at
+        th remember_created_at
+        th sign_in_count
+        th current_sign_in_at
+        th last_sign_in_at
+        th current_sign_in_ip
+        th last_sign_in_ip
+        th birth
+        th confirmation_token
+        th confirmed_at
+        th confirmation_sent_at
+        th unconfirmed_email
+        th failed_attempts
+        th unlock_token
+        th locked_at
+        th
+        th
+        th
+
+    tbody
+      - @clients.each do |client|
+        tr
+          td = client.id
+          td = client.firstname
+          td = client.lastname
+          td = client.email
+          td = client.resp
+          td = client.phone
+          td = client.photo
+          td = client.gender
+          td = "#{client.location.suburb}, #{client.location.state}"
+          td = client.encrypted_password
+          td = client.reset_password_token
+          td = client.reset_password_sent_at
+          td = client.remember_created_at
+          td = client.sign_in_count
+          td = client.current_sign_in_at
+          td = client.last_sign_in_at
+          td = client.current_sign_in_ip
+          td = client.last_sign_in_ip
+          td = client.birth
+          td = client.confirmation_token
+          td = client.confirmed_at
+          td = client.confirmation_sent_at
+          td = client.unconfirmed_email
+          td = client.failed_attempts
+          td = client.unlock_token
+          td = client.locked_at
+          td = link_to 'Show', "/admin"+client_path(client)
+          td = link_to 'Edit', "/admin"+edit_client_path(client)
+          td = link_to 'Destroy', client, data: { confirm: 'Are you sure?' }, method: :delete
+
+  br
+  = link_to 'New Client', new_client_path
+
+

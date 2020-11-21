@@ -1,0 +1,1 @@
+require "#{Rails.root}/lib/tasks/db/connect_pg.rb"

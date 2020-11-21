@@ -1,0 +1,59 @@
+.container
+  - if @order
+    = form_for @order, url: new_order_visual_index_path  do |f|
+      - if @order.errors.any?
+        #error_explanation
+          h2 = "#{pluralize(client.errors.count, "error")} prohibited this order from being saved:"
+          ul
+            - @order.errors.full_messages.each do |message|
+              li = message
+      .col-lg-8.col-md-8
+        h1.text-center
+          |Pick one of the promotional features below and give your ad a boost
+        hr
+        = f.text_field :id, class:"none"
+        = f.text_field :type, class:"none"
+        .row
+          .col-lg-6.col-md-6
+            =image_bg(image_url("urgent_example.png"), "contain", "300px", "132px", autoload: false)
+          .col-lg-5.col-md-5.text-center
+            h3
+              |Urgent #{currency(@order.current, @order.urgent_price)} (7 days)
+            p
+              |In a hurry? Add an Urgent tag to your  ad. It's a great way to attract serious offers quickly.
+          .col-lg-1.col-md-1.text-center
+            span.glyphicon.glyphicon-unchecked.radio_button_customer
+              input.none[type="radio" name="new_order_visual[product]" value ="urgent"]
+        hr
+        .row
+          .col-lg-6.col-md-6
+            =image_bg(image_url("highlight_example.png"), "contain", "300px", "132px", autoload: false)
+          .col-lg-5.col-md-5.text-center
+            h3
+              |Highlight #{currency(@order.current, @order.highlight_price)} (7 days)
+            p
+              |Make your ad pop with a colourful background. It'll help you stand out from the crowd and attract more visits.
+          .col-lg-1.col-md-1.text-center
+            span.glyphicon.glyphicon-unchecked.radio_button_customer
+              input.none[type="radio" id name="new_order_visual[product]" value ="highlight"]
+        hr
+        .row
+          .col-lg-6.col-md-6
+            =image_bg(image_url("highlight_and_urgent_example.png"), "contain", "300px", "132px", autoload: false)
+          .col-lg-5.col-md-5.text-center
+            h3
+              |Urgent & Highlight
+              br
+                |#{currency(@order.current, @order.urgent_and_highlight_price)} (7 days)
+          .col-lg-1.col-md-1.text-center
+            span.glyphicon.glyphicon-ok.radio_button_customer.active
+              input.none[type="radio" name="new_order_visual[product]" value ="urgent_and_highlight" checked]
+        hr
+        .row
+          .col-lg-6.col-md-6.col-sm-6.col-xs-6
+            = link_to("Cancel", @order.object.path, class:"btn btn-success btn-block" )
+            p
+          .col-lg-6.col-md-6.col-sm-6.col-xs-6
+            = f.submit "Pay now", class: "btn btn-primary btn-block"
+            p
+  p

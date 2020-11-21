@@ -1,0 +1,27 @@
+.container
+  .row
+    h1 Your company
+    .well
+      .row
+        .col-md-4.col-lg-4.col-sm-6.col-xs-12.text-center
+          = image_tag(@company.logo_url, size: "300x300", class: 'img-thumbnail', alt: @company.name)
+          = link_to "Update logo", edit_logo_path, class:"btn btn-success btn-block btn_margin"
+          = link_to "Edit information", edit_company_path(@company), class:"btn btn-primary btn-block btn_margin"
+        .col-md-8.col-lg-8.col-sm-6.col-xs-12
+          h4 Name: #{@company.name}
+          h4 Size: #{@company.size ? @company.size.size : "empty"}
+          -if @company.site
+            h4
+              |Website:
+              =link_to @company.site, @company.site, rel: "nofollow"
+          -else
+            h4 Website: empty
+          h4 #{@company.location.name}
+          - if @company.recrutmentagency
+            h4 Recruitment agency
+      .row
+        .col-md-12.col-lg-12
+          h3.text-center
+            |Description
+          p
+            =  @company.render_description

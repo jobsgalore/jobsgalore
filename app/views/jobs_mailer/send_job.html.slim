@@ -1,0 +1,22 @@
+div[style=title_email]
+  div[style=h1_email]
+    =link_to @job.title, job_url(@job) + @utm, target: "_blank"
+div[style=body_email]
+  - if not @job.salary.blank?
+    = @job.salary
+  = HtmlToPlainText.plain_text(@job.description).squish.truncate(300, separator: ' ', omission: '') + "..."
+  = space_email
+  | #{link_to @job.company.name, company_url(@job.company)  + @utm, style: "color: #3c763d; "} - #{link_to @job.location.name , local_object_url(@job.location.id,Objects::JOBS.code)+ @utm, style: "color: #66512c;"}
+  div[style=button_email]
+    = link_to 'Show', job_url(@job) + @utm, style: link_email, target: "_blank"
+  = space_email true
+  = space_email
+  ul[align="left"]
+    -@list_of_jobs.each do |job|
+      li
+        = link_to job.title.capitalize, job_url(job) + @utm, style: "color:#66512c"
+      | #{link_to job.company.name, company_url(job.company)  + @utm, style: "color: #3c763d; "} - #{link_to job.location.name , local_object_url(job.location.id,Objects::JOBS.code)+ @utm, style: "color: #66512c;"}
+  = space_email
+  |#{link_to('JobsGalore.eu', root_url)} - More jobs in real time.
+= render "inc_mailer/mailing"
+

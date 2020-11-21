@@ -1,0 +1,66 @@
+= form_for @client_with_resume, url: admin_client_with_resume_index_path do |f|
+  - if @client_with_resume.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@client_with_resume.errors.count, "error")} prohibited this company from being saved:"
+      ul
+        - @client_with_resume.errors.full_messages.each do |message|
+          li = message
+  hr.colorgraph
+  .form-group
+    = f.label "Full Name"
+    br
+    = f.text_field :fullname, class: "form-control", required: "required"
+  .form-group
+    = f.label "Email"
+    br
+    = f.text_field :email, class: "form-control", required: "required"
+  .form-group
+    = f.label :phone, "Your phone number"
+    em
+      |&nbsp;(optional)
+    br
+    = react_component('InputMask', id: "phone", name: "admin_create_client_with_resume[phone]", class_name: "form-control", dataformat: "dd dddd dddddd", placeholder: "02 9999 9999", defaultValue:@client_with_resume&.phone)
+  .form-group
+    = f.label :location
+    br
+    = react_component('Autocomplete',
+              className: "form-control dropdown-toggle",
+              name: "admin_create_client_with_resume[location",
+              id: "admin_create_client_with_resume_location_id",
+              route: '/search_locations/',
+              defaultName: @client_with_resume.location_id ? @client_with_resume.location_name : Location.default.name,
+              defaultId: @client_with_resume.location_id ? @client_with_resume.location_id : Location.default.id)
+  h2
+    |New resume
+  hr.colorgraph
+  .form-group
+    = f.label :title, "Title"
+    em
+      |&nbsp(Put your profession or skills here, not your name.)
+    br
+    = f.text_field :title, class: "form-control", required: "required"
+  .form-group
+    = f.label :industry, "Professional area"
+    br
+    = f.collection_select(:industry, Industry.select(:id, :name).all, :id, :name, {prompt: true}, {class: "form-control"})
+  .form-group
+    = f.label :description, "Resume (CV)"
+    br
+    = f.text_area :description, id: "editor_resume", class: "none", contenteditable: false
+    trix-editor[input="editor_resume" ]
+  h2
+    |Email
+  hr.colorgraph
+  .form-group
+    = f.label :subject
+    br
+    = f.text_field :subject, class: "form-control"
+  hr.colorgraph
+    .row
+      .col-xs-12.col-md-6.col-sm-6.col-lg-6
+        = link_to 'Back', :back, class: "btn btn-success btn-block"
+        p
+      .col-xs-12.col-md-6.col-sm-6.col-lg-6
+        = f.submit class: "btn btn-primary btn-block"
+        p
+

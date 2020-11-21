@@ -1,0 +1,27 @@
+div[style=title_email]
+  div[style=h1_email]
+    |Your resume was successfully posted on Jobs Galore!
+div[style=body_email]
+  strong
+    |Dear #{@resume.client.full_name}
+  =space_email
+  |You have successfully posted your resume #{link_to @resume.title, resume_url(@resume.id) + "?"+@utm} on Jobs Galore.
+  div[style=button_email]
+    = link_to 'Show', resume_url(@resume.id) + "?" + @utm, style: link_email, target: "_blank"
+  =space_email
+  =space_email
+= render "inc_mailer/mailing"
+hr
+div[style=title_email]
+  div[style=h1_email]
+    |Find a new job quickly:
+div[style=body_email]
+    =space_email
+    =render 'resumes_mailer/party_of_email/urgent'
+    =space_email
+    =render 'resumes_mailer/party_of_email/highlight'
+    div[style=button_email]
+      = link_to 'Find quickly', new_order_url(@resume, :resume), style: link_email, target: "_blank"
+
+
+

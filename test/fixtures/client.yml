@@ -1,0 +1,35 @@
+admin:
+  id: 16
+  firstname: Tom
+  lastname: Jeferson
+  email: v.nichkov@hotmail.com
+  phone: +61 8 3747 7928
+  password:
+  photo_uid: 2017/11/09/10/53/39/2c2e3531-79a5-41b6-a1a3-869712a294a8/107-Nail-Your-Interview-Dont-Appear-Unprofessional-1.png
+  gender: false
+  location_id: 22
+  character: applicant
+  send_email: true
+  company_id:
+  provider:
+  uid:
+  sources: http://www.linkedin.com/in/vyacheslav-nichkov-3b326279
+  token: AQWOxi5gHIX55RNpALXRcfZK5Q735i7RR9jkgbwbu15QOt8liYRhFKGr_3EiHb7QoLCHEzmkCakKAd0ZpyPv4hj6s50GEW95MMa-Vvct5s4T05i-Icdg_wSUeHL26Ip8BpeHDZ7zcg_DqCpvc57sTi0sqFJlJI-wkZgCICy-LwmyeQdwNLlmEsjnim_1aeFynHv-ZPR5KnbNsSK-g0NZIUe3SKr07GCUXDdjDQbTcii1Od7i366HRzPPmZUeMIfiiCbsIo0pIItwz7AfZcPsJE1NZedA6NjNZW2Yzz9n3TfZ--HWSW0m99swKrX-PcbFSALsWgUOWI747aSFMs5PJFwHQ9mHWQ
+1068:
+    id: 1068
+    firstname: Hays Recruitment
+    lastname: HR
+    email: Hays_Recruitment@email.com.au
+    phone:
+    password:
+    photo_uid:
+    gender:
+    location_id: 61
+    birth:
+    character: employer
+    send_email: false
+    company_id: 1031
+    provider:
+    uid:
+    sources:
+    token:

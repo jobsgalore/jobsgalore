@@ -1,0 +1,13 @@
+Daily Jobs Alert
+
+<% @list_of_jobs.each do |job|%>
+  <%= job.title.capitalize%>
+  <%= job.company.name%> &nbsp; - <%= job.location.name%>(<%= local_object_url(job.location.id,Objects::JOBS.code)%>)
+  <% if not job.salary.blank? then %>
+    <%= job.salary%>
+  <% end %>
+  <%=HtmlToPlainText.plain_text(job.description).squish.truncate(300, separator: ' ',omission: '') + "..." %>
+
+<% end %>
+
+<%= render "inc_mailer/mailing"%>
